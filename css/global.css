@@ -1,2 +1,10 @@
 body {
 }
+
+#ad-banner-wrap {
+  width: 1224px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 12px;
+  margin-bottom: 44px;
+}

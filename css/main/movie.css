@@ -1,25 +1,69 @@
 #movie-wrap {
   width: 1224px;
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   gap: 22px;
+  border-radius: 12px;
+  padding: 20px 0px 20px 0px;
+  margin-bottom: 44px;
 }
 
 #movie-title-wrap {
   display: flex;
+  justify-content: space-between;
+  padding: 0px 18px 0px 18px;
 }
 
 #top-rated-movies-wrap {
   display: flex;
   gap: 22px;
+  padding: 0px 18px 0px 18px;
 }
 
 #popular-movies-wrap {
   display: flex;
   gap: 22px;
+  padding: 0px 18px 0px 18px;
 }
 
 #upcoming-movies-wrap {
   display: flex;
   gap: 22px;
+  padding: 0px 18px 0px 18px;
+}
+
+.movie-content-wrap {
+  line-height: 1.5;
+  position: relative;
+  cursor: pointer;
+}
+
+.movie-content-wrap > img {
+  width: 220px;
+  height: 300px;
+  border-radius: 12px;
+}
+
+.movie-content-wrap > h4 {
+  white-space: nowrap;
+  width: 200px;
+}
+
+.movie-vote-average-text {
+}
+
+.movie-release-date-text {
+}
+
+.movie-rank-text {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  padding: 2px 2px 4px 2px;
+  top: 12px;
+  left: 12px;
+  border-radius: 6px;
+  text-align: center;
 }

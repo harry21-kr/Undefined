@@ -3,16 +3,45 @@ const reviewContainer = document.querySelector(".review__container");
 
 const handleSubmit = (e) => {
   let review = {};
+  let isValid = true;
+  let errorMessage = "";
   const reviewInputs = document.querySelectorAll("input");
   e.preventDefault();
   reviewInputs.forEach((input) => {
-    review[input.id] = input.value;
+    const value = input.value.trim();
+    switch (input.id) {
+      case "username":
+        if (value.length < 2) {
+          isValid = false;
+          errorMessage = "작성자 두 글자 이상~";
+        }
+        break;
+      case "password":
+        if (value.length < 8 || !/[!@#$%^&*(),.?":{}|<>]/.test(value)) {
+          isValid = false;
+          errorMessage = "비밀번호는 특수문자를 포함한 8자 이상~";
+        }
+        break;
+      case "review":
+        if (value.length < 10) {
+          isValid = false;
+          errorMessage = "리뷰 10자이상~";
+        }
+        break;
+    }
+    if (isValid) {
+      review[input.id] = value;
+    }
   });
+
+  if (!isValid) {
+    alert(errorMessage);
+    return;
+  }
   review = { ...review, movieId: "/" };
   const id = Date.now();
 
   localStorage.setItem(id, JSON.stringify(review));
-  console.log("asd");
   displayReview();
 };
 

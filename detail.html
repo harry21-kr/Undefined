@@ -12,6 +12,62 @@
     <script type="module" src="js/detail/index.js"></script>
   </head>
   <body>
-    <h1>Hello World2!</h1>
+    <div id="wrap">
+      <!-- 헤더 -->
+      <header>
+        <div id="title-container">
+          <h1>Undefined</h1>
+        </div>
+        <div id="search-form-container">
+          <form id="search-form">
+            <input id="search-input" type="text" placeholder="Search.." />
+            <button id="search-btn">검색</button>
+          </form>
+        </div>
+      </header>
+      <main>
+        <!-- 영화 배경화면 및 정보 -->
+        <div id="backdrop-container">
+          <p id="movie-title"></p>
+          <p id="movie-overview"></p>
+          <p id="movie-release-date"></p>
+          <p id="movie-genre"></p>
+        </div>
+        <div id="">
+          <!-- 영화 포스터 및 평점 -->
+          <div id="poster-container"></div>
+          <!-- 리뷰 입력란 -->
+          <div id="review-form-container">
+            <form id="review-form">
+              <div id="info-input-container">
+                <input type="text" id="username-input" />
+                <input type="text" id="pwd-input" />
+              </div>
+              <div id="content-input-container">
+                <input type="text" id="content-input" />
+              </div>
+              <button id="review-btn">등록</button>
+            </form>
+          </div>
+        </div>
+        <!-- 해당 영화 리뷰 -->
+        <div id="reviews-container">
+          <div id="review-cnt"></div>
+          <div>
+            <ul id="review-list">
+              <li id="review">
+                <p id="user-name"></p>
+                <button id="edit-review-btn"></button>
+                <button id="delete-review-btn"></button>
+                <p id="review-content"></p>
+                <p id="like-count"></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+      <!-- 푸터 -->
+      <footer></footer>
+    </div>
   </body>
 </html>

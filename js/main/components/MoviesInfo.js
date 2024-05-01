@@ -1,4 +1,4 @@
-import { TMDB_IMAGE_URL } from "../../config/constants";
+import { TMDB_IMAGE_URL } from "../../config/constants/index.js";
 
 export default function MoviesInfo(data) {
   const movieElements = data

@@ -1,0 +1,25 @@
+#movie-wrap {
+  width: 1224px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+#movie-title-wrap {
+  display: flex;
+}
+
+#top-rated-movies-wrap {
+  display: flex;
+  gap: 22px;
+}
+
+#popular-movies-wrap {
+  display: flex;
+  gap: 22px;
+}
+
+#upcoming-movies-wrap {
+  display: flex;
+  gap: 22px;
+}

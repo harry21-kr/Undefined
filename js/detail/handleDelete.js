@@ -1,8 +1,15 @@
+import { checkPassword } from "./checkPassword.js";
+
 export const handleDelete = (e) => {
   if (e.target.className === "delete__btn") {
     const localStorageKey = e.target.dataset.key;
-    localStorage.removeItem(localStorageKey);
-    deleteReview(localStorageKey);
+
+    if (checkPassword(localStorageKey)) {
+      localStorage.removeItem(localStorageKey);
+      deleteReview(localStorageKey);
+    } else {
+      alert("일치하지 않습니다");
+    }
   }
 };
 

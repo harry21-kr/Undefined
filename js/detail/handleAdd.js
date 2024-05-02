@@ -38,9 +38,10 @@ export const handleSubmit = (e) => {
     alert(errorMessage);
     return;
   }
-  review = { ...review, movieId: "/" };
+  const date = new Date();
+  const submittedAt = `${date.getFullYear()}.${date.getMonth()}.${date.getDay()} ${date.getHours()}:${date.getMinutes()}`;
+  review = { ...review, submittedAt, movieId: "/" };
   const key = Date.now();
-  console.log(key);
 
   localStorage.setItem(key, JSON.stringify(review));
   addReview(review, key);
@@ -53,11 +54,11 @@ function addReview(review, key) {
 
 export function createReviewElement(reviewContent, key) {
   console.log(reviewContent);
-  const { username, review } = reviewContent;
+  const { username, review, submittedAt } = reviewContent;
   const reviewRow = document.createElement("li");
   reviewRow.setAttribute("class", "review__row");
   reviewRow.setAttribute("data-key", key);
-  reviewRow.innerHTML = `${username}: ${review}
+  reviewRow.innerHTML = `${username}: ${review} ${submittedAt}
         <button class="delete__btn" data-key=${key}>❌</button>
         `;
   return reviewRow;

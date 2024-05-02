@@ -168,4 +168,12 @@ main {
 footer {
   height: 100px;
   background-color: black;
+  display: flex;
+  align-items: center;
+}
+
+#footer-wrapper {
+  margin-left: 100px;
+  font-size: 12px;
+  color: white;
 }

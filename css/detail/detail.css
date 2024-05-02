@@ -1,3 +1,14 @@
 body {
   background: gray;
 }
+.i_btn{
+background-color:transparent ;
+border: none;
+cursor: pointer;
+}
+.fa-solid{
+  display: none;
+}
+.fa-regular{
+  display: block;
+}

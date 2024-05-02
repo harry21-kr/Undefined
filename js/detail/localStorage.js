@@ -7,5 +7,3 @@ reviewForm.addEventListener("submit", handleSubmit);
 reviewContainer.addEventListener("click", handleDelete);
 
 displayAllReviews();
-
-// 수정기능

@@ -6,7 +6,6 @@ export const handleSubmit = (e) => {
   let errorMessage = "";
   const reviewInputs = document.querySelectorAll(".review-input");
   e.preventDefault();
-  console.log(reviewInputs);
 
   reviewInputs.forEach((input) => {
     const value = input.value.trim();
@@ -43,7 +42,6 @@ export const handleSubmit = (e) => {
   const submittedAt = `${date.getFullYear()}-${
     date.getMonth() + 1
   }-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
-  console.log(submittedAt);
   review = { ...review, submittedAt, movieId: "/" };
   const key = date.getTime();
 
@@ -57,7 +55,6 @@ function addReview(review, key) {
 }
 
 export function createReviewElement(reviewContent, key) {
-  console.log(reviewContent);
   const reviewCount = localStorage.length;
   const { username, review, submittedAt } = reviewContent;
   reviewCnt.innerHTML = `댓글 ${reviewCount}개`;

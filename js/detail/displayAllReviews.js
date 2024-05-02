@@ -2,7 +2,6 @@ import { createReviewElement } from "./handleAdd.js";
 import { reviewContainer } from "./domElements.js";
 
 export const displayAllReviews = () => {
-  // reviewContainer.innerHTML = "";
   const keys = [];
   const allReviews = localStorage.length;
   for (let i = 0; i < allReviews; i++) {

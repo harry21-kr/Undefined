@@ -49,24 +49,7 @@
               />
               <p id="movie-rate">평점: 8.15</p>
             </div>
-            <!-- 리뷰 입력란 -->
-            <div id="review-form-wrapper">
-              <form id="review-form">
-                <div id="info-input-wrapper">
-                  <label id="username-label" for="username">사용자명</label>
-                  <input type="text" id="username" class="review-input" />
-                  <label id="password-label" for="password">비밀번호</label>
-                  <input type="password" id="password" class="review-input" />
-                </div>
-                <div id="review-wrapper">
-                  <label id="review-label" for="review">내용</label>
-                  <textarea id="review" class="review-input"></textarea>
-                </div>
-                <div id="review-form-btn-box">
-                  <button id="review-btn">등록</button>
-                </div>
-              </form>
-            </div>
+            <div></div>
           </div>
           <!-- 해당 영화 리뷰 -->
           <div id="reviews-wrapper">
@@ -74,6 +57,27 @@
             <div>
               <ul id="review-list"></ul>
             </div>
+          </div>
+          <!-- 리뷰 입력란 -->
+          <div id="review-form-wrapper">
+            <form id="review-form">
+              <div id="info-input-wrapper">
+                <label id="username-label" for="username">사용자명</label>
+                <input type="text" id="username" class="review-input" />
+                <label id="password-label" for="password">비밀번호</label>
+                <input type="password" id="password" class="review-input" />
+              </div>
+              <div id="review-wrapper">
+                <textarea
+                  id="review"
+                  class="review-input"
+                  placeholder="내용을 입력하세요."
+                ></textarea>
+              </div>
+              <div id="review-form-btn-box">
+                <button id="review-btn">등록</button>
+              </div>
+            </form>
           </div>
         </div>
       </main>

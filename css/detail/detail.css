@@ -62,40 +62,10 @@ main {
   font-size: 18px;
 }
 
-#review-form-wrapper {
-  width: 900px;
-  height: 300px;
-  border: solid 1px black;
-  border-radius: 10px;
-}
-
-#review-form {
-  padding: 20px;
-}
-
-#password-label {
-  margin-left: 20px;
-}
-
-#review-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin-top: 15px;
-}
-
-#review-label {
-  margin-bottom: 10px;
-}
-
-#review-form-btn-box {
-  margin-top: 10px;
-  text-align: right;
-}
-
 #reviews-wrapper {
   height: 300px;
   padding: 100px 0;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   border: solid 1px black;
   border-radius: 10px;
 }
@@ -142,4 +112,34 @@ main {
 
 #like-count {
   font-size: 18px;
+}
+
+/* 리뷰 입력란 스타일 */
+#review-form-wrapper {
+  height: 150px;
+  border: solid 1px black;
+  border-radius: 10px;
+}
+
+#review-form {
+  padding: 20px;
+}
+
+#password-label {
+  margin-left: 20px;
+}
+
+#review-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+#review-label {
+  margin-bottom: 10px;
+}
+
+#review-form-btn-box {
+  margin-top: 10px;
+  text-align: right;
 }

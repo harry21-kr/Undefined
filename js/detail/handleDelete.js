@@ -1,7 +1,7 @@
 import { checkPassword } from "./checkPassword.js";
 
 export const handleDelete = (e) => {
-  if (e.target.className === "delete__btn") {
+  if (e.target.id === "delete-review-btn") {
     const localStorageKey = e.target.dataset.key;
 
     if (checkPassword(localStorageKey)) {
@@ -15,7 +15,7 @@ export const handleDelete = (e) => {
 
 function deleteReview(localStorageKey) {
   const toBeDeleted = document.querySelector(
-    `.review__row[data-key="${localStorageKey}"]`
+    `#review-row[data-key="${localStorageKey}"]`
   );
   toBeDeleted.remove();
 }

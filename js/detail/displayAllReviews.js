@@ -2,9 +2,10 @@ import { createReviewElement } from "./handleAdd.js";
 import { reviewContainer } from "./domElements.js";
 
 export const displayAllReviews = () => {
-  reviewContainer.innerHTML = "";
+  // reviewContainer.innerHTML = "";
   const keys = [];
-  for (let i = 0; i < localStorage.length; i++) {
+  const allReviews = localStorage.length;
+  for (let i = 0; i < allReviews; i++) {
     keys.push(localStorage.key(i));
   }
   const sortedKeys = keys.map((key) => Number(key)).sort((a, b) => a - b);

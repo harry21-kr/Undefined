@@ -1,11 +1,12 @@
-import { reviewContainer } from "./domElements.js";
+import { reviewCnt, reviewContainer } from "./domElements.js";
 
 export const handleSubmit = (e) => {
   let review = {};
   let isValid = true;
   let errorMessage = "";
-  const reviewInputs = document.querySelectorAll("input");
+  const reviewInputs = document.querySelectorAll(".review-input");
   e.preventDefault();
+  console.log(reviewInputs);
 
   reviewInputs.forEach((input) => {
     const value = input.value.trim();
@@ -39,9 +40,12 @@ export const handleSubmit = (e) => {
     return;
   }
   const date = new Date();
-  const submittedAt = `${date.getFullYear()}.${date.getMonth()}.${date.getDay()} ${date.getHours()}:${date.getMinutes()}`;
+  const submittedAt = `${date.getFullYear()}-${
+    date.getMonth() + 1
+  }-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
+  console.log(submittedAt);
   review = { ...review, submittedAt, movieId: "/" };
-  const key = Date.now();
+  const key = date.getTime();
 
   localStorage.setItem(key, JSON.stringify(review));
   addReview(review, key);
@@ -54,12 +58,31 @@ function addReview(review, key) {
 
 export function createReviewElement(reviewContent, key) {
   console.log(reviewContent);
+  const reviewCount = localStorage.length;
   const { username, review, submittedAt } = reviewContent;
+  reviewCnt.innerHTML = `댓글 ${reviewCount}개`;
   const reviewRow = document.createElement("li");
-  reviewRow.setAttribute("class", "review__row");
+  reviewRow.setAttribute("id", "review-row");
   reviewRow.setAttribute("data-key", key);
-  reviewRow.innerHTML = `${username}: ${review} ${submittedAt}
-        <button class="delete__btn" data-key=${key}>❌</button>
-        `;
+  reviewRow.innerHTML = `
+  <div id="review-box-top">
+                    <p id="username-display">${username}</p>
+                    <div id="review-btn-box">
+                      <button id="edit-review-btn">수정</button>
+                      <button id="delete-review-btn" data-key=${key}>삭제</button>
+                    </div>
+                  </div>
+                  <div id="review-box-bottom">
+                    <div id="review-content-box">
+                      <p id="review-display">
+                      ${review}
+                      </p>
+                    </div>
+                    <div id="review-detail-box">
+                      <p id="review-time">${submittedAt}</p>
+                      <p id="like-count">♥ 7</p>
+                    </div>
+                  </div>
+  `;
   return reviewRow;
 }

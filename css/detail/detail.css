@@ -1,7 +1,3 @@
-body {
-  background: gray;
-}
-
 #wrap {
   height: auto;
   min-height: 100%;
@@ -77,17 +73,17 @@ main {
   padding: 20px;
 }
 
-#pwd-input-label {
+#password-label {
   margin-left: 20px;
 }
 
-#content-input-wrapper {
+#review-wrapper {
   display: flex;
   flex-direction: column;
   margin-top: 15px;
 }
 
-#content-input-label {
+#review-label {
   margin-bottom: 10px;
 }
 
@@ -108,7 +104,7 @@ main {
   margin: 0 30px;
 }
 
-#review {
+#review-row {
   margin: 30px;
   padding: 20px;
   border: solid 1px black;

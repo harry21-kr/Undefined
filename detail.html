@@ -52,18 +52,14 @@
             <div id="review-form-wrapper">
               <form id="review-form">
                 <div id="info-input-wrapper">
-                  <label id="username-input-label" for="username-input"
-                    >사용자명</label
-                  >
-                  <input type="text" id="username-input" />
-                  <label id="pwd-input-label" for="pwd-input">비밀번호</label>
-                  <input type="text" id="pwd-input" />
+                  <label id="username-label" for="username">사용자명</label>
+                  <input type="text" id="username" />
+                  <label id="password-label" for="password">비밀번호</label>
+                  <input type="text" id="password" />
                 </div>
-                <div id="content-input-wrapper">
-                  <label id="content-input-label" for="content-input"
-                    >내용</label
-                  >
-                  <textarea id="content-input"></textarea>
+                <div id="review-wrapper">
+                  <label id="review-label" for="review">내용</label>
+                  <textarea id="review"></textarea>
                 </div>
                 <div id="review-form-btn-box">
                   <button id="review-btn">등록</button>
@@ -76,9 +72,9 @@
             <div id="review-cnt">댓글 1</div>
             <div>
               <ul id="review-list">
-                <li id="review">
+                <li id="review-row">
                   <div id="review-box-top">
-                    <p id="user-name">감자고구마</p>
+                    <p id="username-display">감자고구마</p>
                     <div id="review-btn-box">
                       <button id="edit-review-btn">수정</button>
                       <button id="delete-review-btn">삭제</button>
@@ -86,7 +82,7 @@
                   </div>
                   <div id="review-box-bottom">
                     <div id="review-content-box">
-                      <p id="review-content">
+                      <p id="review-display">
                         영화 너무 재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭
                         보세요! 영화 너무 재밌어요. 꼭 보세요! 영화 너무
                         재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭 보세요! 영화

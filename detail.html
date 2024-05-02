@@ -12,6 +12,114 @@
     <script type="module" src="js/detail/index.js"></script>
   </head>
   <body>
-    <h1>Hello World2!</h1>
+    <div id="wrap">
+      <!-- 헤더 -->
+      <header>
+        <div id="title-wrapper">
+          <h1>Undefined</h1>
+        </div>
+        <div id="search-form-wrapper">
+          <form id="search-form">
+            <input id="search-input" type="text" placeholder="Search.." />
+            <button id="search-btn">검색</button>
+          </form>
+        </div>
+      </header>
+      <main>
+        <!-- 영화 배경화면 및 정보 -->
+        <div id="backdrop-wrapper">
+          <div id="movie-detail">
+            <p id="movie-title">영화 제목</p>
+            <p id="movie-overview">
+              영화 줄거리 줄거리 줄거리 줄거리 줄거리 줄거리 줄거리 줄거리
+              줄거리 줄거리 줄거리 줄거리 줄거리 줄거리 줄거리 줄거리 줄거리
+              줄거리 줄거리 줄거리 줄거리 줄거리 줄거리 줄거리 줄거리
+            </p>
+            <p id="movie-feature">영화 개봉연도 · 영화 장르</p>
+          </div>
+        </div>
+        <div id="main-wrapper">
+          <div id="review-box-wrapper">
+            <!-- 영화 포스터 및 평점 -->
+            <div id="poster-wrapper">
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5a7f41ad8fd4d236a4ad76d0/1669842753281-3T90U1EY5HUNCG43XERJ/A2_Poster_DC_v80_PAYOFF_221029_12trimHD.jpg"
+                alt=""
+              />
+              <p id="movie-rate">평점: 8.15</p>
+            </div>
+            <!-- 리뷰 입력란 -->
+            <div id="review-form-wrapper">
+              <form id="review-form">
+                <div id="info-input-wrapper">
+                  <label id="username-input-label" for="username-input"
+                    >사용자명</label
+                  >
+                  <input type="text" id="username-input" />
+                  <label id="pwd-input-label" for="pwd-input">비밀번호</label>
+                  <input type="text" id="pwd-input" />
+                </div>
+                <div id="content-input-wrapper">
+                  <label id="content-input-label" for="content-input"
+                    >내용</label
+                  >
+                  <textarea id="content-input"></textarea>
+                </div>
+                <div id="review-form-btn-box">
+                  <button id="review-btn">등록</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- 해당 영화 리뷰 -->
+          <div id="reviews-wrapper">
+            <div id="review-cnt">댓글 1</div>
+            <div>
+              <ul id="review-list">
+                <li id="review">
+                  <div id="review-box-top">
+                    <p id="user-name">감자고구마</p>
+                    <div id="review-btn-box">
+                      <button id="edit-review-btn">수정</button>
+                      <button id="delete-review-btn">삭제</button>
+                    </div>
+                  </div>
+                  <div id="review-box-bottom">
+                    <div id="review-content-box">
+                      <p id="review-content">
+                        영화 너무 재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭
+                        보세요! 영화 너무 재밌어요. 꼭 보세요! 영화 너무
+                        재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭 보세요! 영화
+                        너무 재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭 보세요!
+                        영화 너무 재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭
+                        보세요! 영화 너무 재밌어요. 꼭 보세요! 영화 너무
+                        재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭 보세요! 영화
+                        너무 재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭 보세요!
+                        영화 너무 재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭
+                        보세요! 영화 너무 재밌어요. 꼭 보세요! 영화 너무
+                        재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭 보세요! 영화
+                        너무 재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭 보세요!
+                        영화 너무 재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭
+                        보세요!
+                      </p>
+                    </div>
+                    <div id="review-detail-box">
+                      <p id="review-time">2024-04-10 11:11</p>
+                      <p id="like-count">♥ 7</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- 푸터 -->
+      <footer>
+        <div id="footer-wrapper">
+          <p>푸터</p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

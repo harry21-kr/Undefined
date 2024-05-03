@@ -1,5 +1,5 @@
 import { checkPassword } from "./checkPassword.js";
-import { reviewCnt } from "./domElements.js";
+import { passwordErrorModal, reviewCnt } from "./domElements.js";
 
 export const handleDelete = async (e) => {
   if (e.target.id === "delete-review-btn") {
@@ -8,8 +8,7 @@ export const handleDelete = async (e) => {
     if (isCorrect) {
       deleteReview(localStorageKey);
     } else {
-      alert("일치하지 않습니다");
-      throw new Error();
+      passwordErrorModal.showModal();
     }
   }
 };

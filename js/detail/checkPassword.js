@@ -1,4 +1,5 @@
 import {
+  passwordErrorModal,
   passwordModal,
   passwordModalCancelBtn,
   passwordModalInput,
@@ -7,6 +8,7 @@ import {
 export function checkPassword(localStorageKey) {
   return new Promise((resolve, reject) => {
     openModal();
+
     const handlePasswordSubmit = (e) => {
       e.preventDefault();
       const submittedPassword = passwordModalInput.value;
@@ -27,11 +29,11 @@ export function checkPassword(localStorageKey) {
         closeModal();
       }
     };
+
     passwordModal.addEventListener("submit", handlePasswordSubmit);
     passwordModal.addEventListener("click", handleOutsideClick);
   });
 }
-
 function closeModal() {
   passwordModal.close();
 }
@@ -39,3 +41,5 @@ function openModal() {
   passwordModalInput.value = "";
   passwordModal.showModal();
 }
+
+passwordErrorModal.addEventListener("click", () => passwordErrorModal.close());

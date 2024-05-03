@@ -1,3 +1,21 @@
+:root {
+  /* Text */
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-base: 16px;
+  --font-lg: 18px;
+  --font-xl: 20px;
+  --font-2xl: 24px;
+  --font-3xl: 28px;
+  --font-4xl: 32px;
+  --font-5xl: 36px;
+
+  /* Color */
+  --navy-color: #1f2a37;
+  --primary-color: #384250;
+  --secondary-color: #1c1d1f;
+}
+
 header {
   display: flex;
   justify-content: space-between;

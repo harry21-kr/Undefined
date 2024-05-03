@@ -70,7 +70,7 @@
           </div>
           <!-- 해당 영화 리뷰 -->
           <div id="reviews-wrapper">
-            <div id="review-cnt"></div>
+            <div id="review-cnt">댓글 0개</div>
             <div>
               <ul id="review-list"></ul>
             </div>
@@ -84,5 +84,19 @@
         </div>
       </footer>
     </div>
+    <dialog id="password-modal">
+      <form>
+        <p></p>
+        <input type="password" id="password-modal-input" />
+        <div id="password-modal-btns">
+          <button type="button" id="password-modal-cancel-btn">취소</button>
+          <button type="submit" id="password-modal-confirm-btn">확인</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="password-error-modal">
+      <p>패스워드가 일치하지 않습니다.</p>
+      <button type="button">확인</button>
+    </dialog>
   </body>
 </html>

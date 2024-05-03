@@ -5,9 +5,11 @@ const { getActorsData, getWatchProvidersData, getVideoData } =
 
 const movieId = JSON.parse(sessionStorage.getItem("movie")).id;
 
-const actors = await getActorsData(movieId);
-const providers = await getWatchProvidersData(movieId);
-const trailer = await getVideoData(movieId);
+const [actors, providers, trailer] = await Promise.all([
+  getActorsData(movieId),
+  getWatchProvidersData(movieId),
+  getVideoData(movieId),
+]);
 
 console.log(actors);
 console.log(providers);

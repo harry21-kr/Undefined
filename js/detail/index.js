@@ -10,7 +10,3 @@ const [actors, providers, trailer] = await Promise.all([
   getWatchProvidersData(movieId),
   getVideoData(movieId),
 ]);
-
-console.log(actors);
-console.log(providers);
-console.log(trailer);

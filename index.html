@@ -13,13 +13,24 @@
     <script type="module" src="js/main/index.js"></script>
   </head>
   <body>
+    <header>
+      <div id="title-wrapper">
+        <h1>Undefined</h1>
+      </div>
+      <div id="search-form-wrapper">
+        <form id="search-form">
+          <input id="search-input" type="text" placeholder="Search.." />
+          <button id="search-btn">검색</button>
+        </form>
+      </div>
+    </header>
     <section id="ad-banner-wrap"><p>과아아아아아아앙고배너</p></section>
     <section id="movie-wrap">
       <div id="movie-title-wrap">
         <h2>살면서 한번쯤은 봐야할 영화</h2>
         <div id="movie-button-wrap">
-          <button><</button>
-          <button>></button>
+          <button id="top-rated-movies-previous-button" type="button"><</button>
+          <button id="top-rated-movies-next-button">></button>
         </div>
       </div>
       <div id="top-rated-movies-wrap"></div>
@@ -28,8 +39,8 @@
       <div id="movie-title-wrap">
         <h2>인기있는 영화</h2>
         <div id="movie-button-wrap">
-          <button><</button>
-          <button>></button>
+          <button id="popular-movies-previous-button"><</button>
+          <button id="popular-movies-next-button">></button>
         </div>
       </div>
       <div id="popular-movies-wrap"></div>
@@ -38,11 +49,16 @@
       <div id="movie-title-wrap">
         <h2>개봉예정 영화</h2>
         <div id="movie-button-wrap">
-          <button><</button>
-          <button>></button>
+          <button id="upcoming-movies-previous-button"><</button>
+          <button id="upcoming-movies-next-button">></button>
         </div>
       </div>
       <div id="upcoming-movies-wrap"></div>
     </section>
+    <footer>
+      <div id="footer-wrapper">
+        <p>푸터</p>
+      </div>
+    </footer>
   </body>
 </html>

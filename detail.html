@@ -57,13 +57,13 @@
               <form id="review-form">
                 <div id="info-input-wrapper">
                   <label id="username-label" for="username">사용자명</label>
-                  <input type="text" id="username" />
+                  <input type="text" id="username" class="review-input" />
                   <label id="password-label" for="password">비밀번호</label>
-                  <input type="text" id="password" />
+                  <input type="password" id="password" class="review-input" />
                 </div>
                 <div id="review-wrapper">
                   <label id="review-label" for="review">내용</label>
-                  <textarea id="review"></textarea>
+                  <textarea id="review" class="review-input"></textarea>
                 </div>
                 <div id="review-form-btn-box">
                   <button id="review-btn">등록</button>
@@ -73,43 +73,9 @@
           </div>
           <!-- 해당 영화 리뷰 -->
           <div id="reviews-wrapper">
-            <div id="review-cnt">댓글 1</div>
+            <div id="review-cnt"></div>
             <div>
-              <ul id="review-list">
-                <li id="review-row">
-                  <div id="review-box-top">
-                    <p id="username-display">감자고구마</p>
-                    <div id="review-btn-box">
-                      <button id="edit-review-btn">수정</button>
-                      <button id="delete-review-btn">삭제</button>
-                    </div>
-                  </div>
-                  <div id="review-box-bottom">
-                    <div id="review-content-box">
-                      <p id="review-display">
-                        영화 너무 재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭
-                        보세요! 영화 너무 재밌어요. 꼭 보세요! 영화 너무
-                        재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭 보세요! 영화
-                        너무 재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭 보세요!
-                        영화 너무 재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭
-                        보세요! 영화 너무 재밌어요. 꼭 보세요! 영화 너무
-                        재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭 보세요! 영화
-                        너무 재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭 보세요!
-                        영화 너무 재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭
-                        보세요! 영화 너무 재밌어요. 꼭 보세요! 영화 너무
-                        재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭 보세요! 영화
-                        너무 재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭 보세요!
-                        영화 너무 재밌어요. 꼭 보세요! 영화 너무 재밌어요. 꼭
-                        보세요!
-                      </p>
-                    </div>
-                    <div id="review-detail-box">
-                      <p id="review-time">2024-04-10 11:11</p>
-                      <p id="like-count">♥ 7</p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+              <ul id="review-list"></ul>
             </div>
           </div>
         </div>

@@ -1,19 +1,13 @@
-import { checkPassword } from "./checkPassword.js";
-import { passwordErrorModal, reviewCnt } from "./domElements.js";
+import { verifyAndExecute } from "./checkPassword.js";
+import { reviewCnt } from "./domElements.js";
 
 export const handleDelete = async (e) => {
   if (e.target.id === "delete-review-btn") {
-    const localStorageKey = e.target.dataset.key;
-    const isCorrect = await checkPassword(localStorageKey);
-    if (isCorrect) {
-      deleteReview(localStorageKey);
-    } else {
-      passwordErrorModal.showModal();
-    }
+    await verifyAndExecute(e, deleteReview);
   }
 };
 
-function deleteReview(localStorageKey) {
+const deleteReview = (localStorageKey) => {
   localStorage.removeItem(localStorageKey);
   reviewCnt.innerHTML = `댓글 ${localStorage.length}개`;
 
@@ -21,4 +15,4 @@ function deleteReview(localStorageKey) {
     `#review-row[data-key="${localStorageKey}"]`
   );
   toBeDeleted.remove();
-}
+};

@@ -13,53 +13,93 @@ main {
   background-color: dimgray;
 }
 
-#movie-detail {
-  align-self: flex-end;
-  margin-left: 100px;
-  margin-bottom: 50px;
-  margin-right: 700px;
-}
-
-#movie-title {
-  font-size: 40px;
-  color: white;
-}
-
-#movie-overview {
-  margin-top: 30px;
-  font-size: 16px;
-  color: white;
-}
-
-#movie-feature {
-  margin-top: 20px;
-  font-size: 14px;
-  color: white;
-}
-
 #main-wrapper {
   padding: 0 100px;
 }
 
-#review-box-wrapper {
-  height: 450px;
+#info-box-wrapper {
+  height: 350px;
+  margin: 50px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 #poster-wrapper {
-  width: 250px;
+  height: 100%;
 }
 
 #poster-wrapper img {
-  width: 250px;
+  height: 100%;
+  width: 100%;
+}
+
+#movie-overall-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+  margin: 0 30px;
+}
+
+#movie-basic-info-wrapper {
+  display: block;
+}
+
+#movie-title {
+  display: inline-block;
+  font-size: 40px;
+}
+
+#movie-feature {
+  display: inline-block;
+  font-size: 14px;
+}
+
+#movie-overview {
+  margin-top: 30px;
+  font-size: 16px;
 }
 
 #movie-rate {
   margin-top: 10px;
-  text-align: center;
   font-size: 18px;
+}
+
+#movie-platform-box {
+  margin-top: auto;
+}
+
+#cast-info-wrapper {
+  width: 16%;
+  height: 100%;
+  border: solid 1px black;
+  border-radius: 10px;
+}
+
+#cast-info-box {
+  padding: 20px;
+}
+
+#cast-label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#cast-list {
+  margin-top: 30px;
+}
+
+#cast-row {
+  display: block;
+}
+
+#cast-image {
+  display: inline-block;
+}
+
+#cast-name {
+  display: inline-block;
 }
 
 #reviews-wrapper {

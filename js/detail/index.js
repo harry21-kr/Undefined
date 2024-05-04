@@ -23,5 +23,7 @@ const providerElements = displayProviders(providers);
 const trailerElement = displayTrailer(trailer);
 
 actorsWrap.innerHTML = actorElements;
-providersWrap.innerHTML = providerElements;
+if (providerElements) {
+  providersWrap.innerHTML = providerElements;
+}
 trailerWrap.innerHTML = trailerElement;

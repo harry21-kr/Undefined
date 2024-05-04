@@ -17,7 +17,7 @@ const useMovieDetailData = () => {
     const res = await get(
       `${TMDB_API_URL}/movie/${id}/watch/providers?api_key=${API_KEY}`
     );
-    return res.results.KR.flatrate;
+    return res.results.KR ? res.results.KR.flatrate : null;
   };
 
   // 영화 예고편 받아오기

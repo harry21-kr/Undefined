@@ -12,7 +12,7 @@ main {
   width: 100%;
 }
 
-#backdrop-wrapper {
+#trailer-wrapper {
   display: flex;
   height: 500px;
   background-color: dimgray;
@@ -62,33 +62,33 @@ main {
   font-size: var(--font-lg);
 }
 
-#movie-platform-box {
+#providers-info-wrapper {
   height: 120px;
   border-radius: 12px;
   background: var(--primary-color);
 }
 
-#cast-info-wrapper {
+#actors-info-wrapper {
   width: 220px;
   height: 100%;
   background: var(--primary-color);
   border-radius: 10px;
 }
 
-#cast-info-box {
+#actors-info-box {
   padding: 20px;
 }
 
-#cast-label {
+#actors-label {
   font-size: 20px;
   font-weight: bold;
 }
 
-#cast-list {
+#actors-list {
   margin-top: 30px;
 }
 
-#cast-row {
+#actor-row {
   display: block;
 }
 

@@ -80,11 +80,12 @@ export function createReviewElement(reviewContent, key) {
                     </div>
                     <div id="review-detail-box">
                       <p id="review-time">${submittedAt}</p>
-                      <button class=".i_btn" style="background-color:transparent; border : none; ">
+                      <button class="i_btn" style="background-color: transparent; border: none;" >
                       <i class="fa-solid fa-heart" style= display:none;></i>
                       <i class="fa-regular fa-heart" style= display:block;></i>
                       </button>
-                    </div>
+                      </div>
+                    
                   </div>
   `;
 

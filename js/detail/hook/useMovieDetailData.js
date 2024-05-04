@@ -13,22 +13,25 @@ const useMovieDetailData = () => {
   };
 
   // 스트리밍 사이트 정보 받아오기
-  const getWatchProvidersData = async (id) => {
-    const res = await get(
-      `${TMDB_API_URL}/movie/${id}/watch/providers?api_key=${API_KEY}`
-    );
-    return res.results.KR.flatrate;
-  };
+  // const getWatchProvidersData = async (id) => {
+  //   const res = await get(
+  //     `${TMDB_API_URL}/movie/${id}/watch/providers?api_key=${API_KEY}`
+  //   );
+  //   return res.results.KR.flatrate;
+  // };
 
   // 영화 예고편 받아오기
   const getVideoData = async (id) => {
     const res = await get(
       `${TMDB_API_URL}/movie/${id}/videos?language=en-EN&api_key=${API_KEY}`
     );
-    return res.results.filter((v) => v.name === "Trailer")[0];
+
+    // return res.results.filter((v) => v.name === "Trailer")[0];
+    return res.results[0];
   };
 
-  return { getActorsData, getWatchProvidersData, getVideoData };
+  return { getActorsData, getVideoData };
+  // return { getActorsData, getWatchProvidersData, getVideoData };
 };
 
 export default useMovieDetailData;

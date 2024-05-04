@@ -18,6 +18,10 @@ main {
   background-color: dimgray;
 }
 
+#trailer-video {
+  width: 100%;
+}
+
 #info-box-wrapper {
   height: 350px;
   margin: 50px 0;

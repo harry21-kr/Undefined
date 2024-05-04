@@ -16,13 +16,18 @@
   --secondary-color: #1c1d1f;
 }
 
+body {
+  background: var(--navy-color);
+  color: white;
+}
+
 header {
+  background: var(--primary-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 60px;
-  border-bottom: solid grey;
+  height: 80px;
 }
 
 #title-wrapper {
@@ -36,7 +41,7 @@ header {
 footer {
   width: 100%;
   height: 100px;
-  background-color: black;
+  background: var(--secondary-color);
   display: flex;
   align-items: center;
 }
@@ -49,8 +54,8 @@ footer {
 
 #ad-banner-wrap {
   width: 1224px;
+  background: var(--primary-color);
   height: 200px;
-  border: 1px solid black;
   border-radius: 12px;
   margin-bottom: 44px;
 }

@@ -1,6 +1,6 @@
 #movie-wrap {
+  background: var(--primary-color);
   width: 1224px;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   overflow: hidden;

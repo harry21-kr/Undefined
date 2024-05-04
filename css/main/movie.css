@@ -1,5 +1,4 @@
 #movie-wrap {
-  background: var(--primary-color);
   width: 1224px;
   display: flex;
   flex-direction: column;
@@ -13,25 +12,38 @@
 #movie-title-wrap {
   display: flex;
   justify-content: space-between;
-  padding: 0px 18px 0px 18px;
+}
+
+#movie-title-wrap > h2 {
+  font-size: var(--font-2xl);
+  font-weight: bold;
 }
 
 #top-rated-movies-wrap {
+  width: fit-content;
   display: flex;
   gap: 22px;
-  padding: 0px 18px 0px 18px;
+  padding: 20px 18px 20px 18px;
+  border-radius: 12px;
+  background: var(--primary-color);
 }
 
 #popular-movies-wrap {
+  width: fit-content;
   display: flex;
   gap: 22px;
-  padding: 0px 18px 0px 18px;
+  padding: 20px 18px 20px 18px;
+  border-radius: 12px;
+  background: var(--primary-color);
 }
 
 #upcoming-movies-wrap {
+  width: fit-content;
   display: flex;
   gap: 22px;
-  padding: 0px 18px 0px 18px;
+  padding: 20px 18px 20px 18px;
+  border-radius: 12px;
+  background: var(--primary-color);
 }
 
 .movie-content-wrap {
@@ -49,21 +61,68 @@
 .movie-content-wrap > h4 {
   white-space: nowrap;
   width: 200px;
+  font-size: var(--font-lg);
+  font-weight: 500;
 }
 
 .movie-vote-average-text {
+  font-size: var(--font-sm);
 }
 
 .movie-release-date-text {
+  font-size: var(--font-sm);
 }
 
 .movie-rank-text {
+  background: var(--primary-color);
   position: absolute;
   width: 24px;
   height: 24px;
-  padding: 2px 2px 4px 2px;
+  padding: 2px;
   top: 12px;
   left: 12px;
   border-radius: 6px;
   text-align: center;
+}
+
+.prev-btn {
+  width: 24px;
+  height: 24px;
+  color: white;
+  border: 1px solid white;
+  background: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-right: 8px;
+}
+
+.next-btn {
+  width: 24px;
+  height: 24px;
+  color: white;
+  border: 1px solid white;
+  background: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.5s;
+  margin-right: 12px;
+}
+
+.prev-btn:hover {
+  background: white;
+  color: black;
+}
+
+.next-btn:hover {
+  background: white;
+  color: black;
+}
+
+.prev-btn:active {
+  background: black;
+}
+
+.next-btn:active {
+  background: black;
 }

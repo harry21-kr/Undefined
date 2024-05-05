@@ -1,5 +1,6 @@
 import { createReviewElement } from "./handleAdd.js";
 import { reviewContainer } from "./domElements.js";
+import { movieId } from "./index.js";
 
 export const displayAllReviews = () => {
   const keys = [];
@@ -8,11 +9,13 @@ export const displayAllReviews = () => {
     keys.push(localStorage.key(i));
   }
   const sortedKeys = keys.map((key) => Number(key)).sort((a, b) => a - b);
+  let reviewCount = 0;
   sortedKeys.forEach((key) => {
     {
       const reviewContent = JSON.parse(localStorage.getItem(key));
-      if (reviewContent) {
-        const reviewRow = createReviewElement(reviewContent, key);
+      if (reviewContent.movieId === movieId) {
+        reviewCount++;
+        const reviewRow = createReviewElement(reviewContent, reviewCount, key);
         reviewContainer.appendChild(reviewRow);
       }
     }

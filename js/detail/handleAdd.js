@@ -1,43 +1,41 @@
-import { reviewCnt, reviewContainer } from "./domElements.js";
+import { reviewCnt, reviewContainer, errorMsgPar } from "./domElements.js";
 
 export const handleSubmit = (e) => {
   let review = {};
-  let isValid = true;
   let errorMessage = "";
   const reviewInputs = document.querySelectorAll(".review-input");
   e.preventDefault();
 
-  reviewInputs.forEach((input) => {
-    const value = input.value.trim();
-    input.value = "";
-    switch (input.id) {
-      case "username":
-        if (value.length < 2) {
-          isValid = false;
-          errorMessage = "작성자 두 글자 이상~";
-        }
-        break;
-      case "password":
-        if (value.length < 8 || !/[!@#$%^&*(),.?":{}|<>]/.test(value)) {
-          isValid = false;
-          errorMessage = "비밀번호는 특수문자를 포함한 8자 이상~";
-        }
-        break;
-      case "review":
-        if (value.length < 10) {
-          isValid = false;
-          errorMessage = "리뷰 10자이상~";
-        }
-        break;
-    }
-    if (isValid) {
-      review[input.id] = value;
-    }
-  });
-  if (!isValid) {
-    alert(errorMessage);
+  const [userName, userPassword, userReview] = [
+    reviewInputs[0].value.trim(),
+    reviewInputs[1].value.trim(),
+    reviewInputs[2].value.trim(),
+  ];
+
+  if (userName.length < 2) {
+    errorMessage = "작성자를 두 글자 이상 입력해 주세요.";
+    errorMsgPar.innerHTML = errorMessage;
     return;
+  } else {
+    review["username"] = userName;
   }
+
+  if (userPassword.length < 8 || !/[!@#$%^&*(),.?":{}|<>]/.test(userPassword)) {
+    errorMessage = "비밀번호를 특수문자를 포함한 8자 이상 입력해 주세요.";
+    errorMsgPar.innerHTML = errorMessage;
+    return;
+  } else {
+    review["password"] = userPassword;
+  }
+
+  if (userReview.length < 10) {
+    errorMessage = "리뷰를 10자 이상 작성해 주세요.";
+    errorMsgPar.innerHTML = errorMessage;
+    return;
+  } else {
+    review["review"] = userReview;
+  }
+
   const date = new Date();
   const submittedAt = `${date.getFullYear()}-${
     date.getMonth() + 1
@@ -47,6 +45,9 @@ export const handleSubmit = (e) => {
 
   localStorage.setItem(key, JSON.stringify(review));
   addReview(review, key);
+
+  reviewInputs.forEach((e) => (e.value = ""));
+  errorMsgPar.innerHTML = "";
 };
 
 function addReview(review, key) {

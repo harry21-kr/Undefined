@@ -34,6 +34,17 @@ export function checkPassword(localStorageKey) {
     passwordModal.addEventListener("click", handleOutsideClick);
   });
 }
+
+export async function verifyAndExecute(e, callback) {
+  const localStorageKey = e.target.dataset.key;
+  const isCorrect = await checkPassword(localStorageKey);
+  if (isCorrect) {
+    callback(localStorageKey);
+  } else {
+    passwordErrorModal.showModal();
+  }
+}
+
 function closeModal() {
   passwordModal.close();
 }

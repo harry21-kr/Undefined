@@ -65,12 +65,12 @@ export function createReviewElement(reviewContent, key) {
   <div id="review-box-top">
                     <p id="username-display">${username}</p>
                     <div id="review-btn-box">
-                      <button id="edit-review-btn">수정</button>
+                      <button id="edit-review-btn" data-key=${key}>수정</button>
                       <button id="delete-review-btn" data-key=${key}>삭제</button>
                     </div>
                   </div>
                   <div id="review-box-bottom">
-                    <div id="review-content-box">
+                    <div id="review-content-box" data-key=${key}>
                       <p id="review-display">
                       ${review}
                       </p>

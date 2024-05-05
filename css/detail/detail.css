@@ -72,38 +72,6 @@ main {
   background: var(--primary-color);
 }
 
-#actors-info-wrapper {
-  width: 220px;
-  height: 100%;
-  background: var(--primary-color);
-  border-radius: 10px;
-}
-
-#actors-info-box {
-  padding: 20px;
-}
-
-#actors-label {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-#actors-list {
-  margin-top: 30px;
-}
-
-#actor-row {
-  display: block;
-}
-
-#cast-image {
-  display: inline-block;
-}
-
-#cast-name {
-  display: inline-block;
-}
-
 #reviews-wrapper {
   background: var(--primary-color);
   padding: 40px 24px 40px 24px;

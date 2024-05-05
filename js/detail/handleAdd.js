@@ -1,5 +1,5 @@
 import { reviewCnt, reviewContainer } from "./domElements.js";
-import likeRender from "../detail/icon.js";
+import likeIcon from "./icon.js";
 export const handleSubmit = (e) => {
   let review = {};
   let isValid = true;
@@ -47,13 +47,14 @@ export const handleSubmit = (e) => {
 
   localStorage.setItem(key, JSON.stringify(review));
   addReview(review, key);
+  likeIcon();
 };
 
 function addReview(review, key) {
   const reviewRow = createReviewElement(review, key);
 
   reviewContainer.appendChild(reviewRow);
-  likeRender();
+  likeIcon();
 }
 
 export function createReviewElement(reviewContent, key) {
@@ -80,10 +81,11 @@ export function createReviewElement(reviewContent, key) {
                     </div>
                     <div id="review-detail-box">
                       <p id="review-time">${submittedAt}</p>
-                      <button class="i_btn" style="background-color: transparent; border: none;" >
-                      <i class="fa-solid fa-heart" style= display:none;></i>
-                      <i class="fa-regular fa-heart" style= display:block;></i>
-                      </button>
+                      <div id="event">
+                      <i class="fa-solid fa-heart"></i>
+                      <i class="fa-regular fa-heart"></i>
+                      </div>
+                      <p id="count"></p>
                       </div>
                     
                   </div>

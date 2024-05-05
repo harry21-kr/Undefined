@@ -66,12 +66,6 @@ main {
   font-size: var(--font-lg);
 }
 
-#providers-info-wrapper {
-  height: 120px;
-  border-radius: 12px;
-  background: var(--primary-color);
-}
-
 #reviews-wrapper {
   background: var(--primary-color);
   padding: 40px 24px 40px 24px;

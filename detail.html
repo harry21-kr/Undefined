@@ -105,8 +105,8 @@
       </div>
     </footer>
     <dialog id="password-modal">
-      <form>
-        <p></p>
+      <form id="password-modal-form">
+        <p id="password-modal-message">비밀번호를 입력하세요.</p>
         <input type="password" id="password-modal-input" />
         <div id="password-modal-btns">
           <button type="button" id="password-modal-cancel-btn">취소</button>
@@ -114,9 +114,11 @@
         </div>
       </form>
     </dialog>
-    <dialog id="password-error-modal">
-      <p>패스워드가 일치하지 않습니다.</p>
-      <button type="button">확인</button>
+    <dialog open id="password-error-modal">
+      <div id="password-error-container">
+        <p id="password-error-message">비밀번호가 일치하지 않습니다.</p>
+        <button id="password-error-confirm-btn" type="button">확인</button>
+      </div>
     </dialog>
   </body>
 </html>

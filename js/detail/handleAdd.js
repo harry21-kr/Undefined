@@ -1,4 +1,5 @@
 import { reviewCnt, reviewContainer, errorMsgPar } from "./domElements.js";
+import { movieId } from "./index.js";
 
 export const handleSubmit = (e) => {
   let review = {};
@@ -40,7 +41,7 @@ export const handleSubmit = (e) => {
   const submittedAt = `${date.getFullYear()}-${
     date.getMonth() + 1
   }-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
-  review = { ...review, submittedAt, movieId: "/" };
+  review = { ...review, submittedAt, movieId };
   const key = date.getTime();
 
   localStorage.setItem(key, JSON.stringify(review));
@@ -55,8 +56,7 @@ function addReview(review, key) {
   reviewContainer.appendChild(reviewRow);
 }
 
-export function createReviewElement(reviewContent, key) {
-  const reviewCount = localStorage.length;
+export function createReviewElement(reviewContent, reviewCount, key) {
   const { username, review, submittedAt } = reviewContent;
   reviewCnt.innerHTML = `댓글 ${reviewCount}개`;
   const reviewRow = document.createElement("li");

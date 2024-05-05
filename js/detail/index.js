@@ -6,7 +6,7 @@ import displayTrailer from "./displayTrailer.js";
 const { getActorsData, getWatchProvidersData, getVideoData } =
   useMovieDetailData();
 
-const movieId = JSON.parse(sessionStorage.getItem("movie")).id;
+export const movieId = JSON.parse(sessionStorage.getItem("movie")).id;
 
 const [actors, providers, trailer] = await Promise.all([
   getActorsData(movieId),

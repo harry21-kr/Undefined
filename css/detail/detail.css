@@ -185,3 +185,8 @@ main {
   margin-top: 10px;
   text-align: right;
 }
+
+#edit-review-input {
+  width: 90%;
+  height: 90%;
+}

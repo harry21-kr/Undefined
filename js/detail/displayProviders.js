@@ -1,7 +1,6 @@
 import { TMDB_IMAGE_URL } from "../config/constants/index.js";
 
 export default function displayProviders(data) {
-  console.log(data);
   if (data) {
     const providerElements = data
       .map((provider) => {

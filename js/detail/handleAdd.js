@@ -1,3 +1,4 @@
+import { incrementReviewCount, reviewCount } from "./displayAllReviews.js";
 import { reviewCnt, reviewContainer, errorMsgPar } from "./domElements.js";
 import { movieId } from "./index.js";
 
@@ -52,7 +53,8 @@ export const handleSubmit = (e) => {
 };
 
 function addReview(review, key) {
-  const reviewRow = createReviewElement(review, key);
+  incrementReviewCount();
+  const reviewRow = createReviewElement(review, reviewCount, key);
   reviewContainer.appendChild(reviewRow);
 }
 

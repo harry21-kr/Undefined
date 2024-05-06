@@ -27,12 +27,20 @@ const setupEditConfirm = (reviewContentBox, localStorageKey) => {
   const handleEditConfirm = () => {
     const editReviewInput = document.querySelector("#edit-review-input");
     const editedReview = editReviewInput.value;
-    reviewContentBox.innerHTML = `
-    <p id="review-display">${editedReview}</p>
+    const editReviewErrorMessage = document.querySelector(
+      `#review-row[data-key="${localStorageKey}"] #edit-review-error-message`
+    );
+    if (editedReview.trim().length > 10) {
+      reviewContentBox.innerHTML = `
+<p id="review-display">${editedReview}</p>
 `;
-    const review = JSON.parse(localStorage.getItem(localStorageKey));
-    review.review = editedReview;
-    localStorage.setItem(localStorageKey, JSON.stringify(review));
+      const review = JSON.parse(localStorage.getItem(localStorageKey));
+      review.review = editedReview;
+      localStorage.setItem(localStorageKey, JSON.stringify(review));
+      editReviewErrorMessage.innerText = "";
+    } else {
+      editReviewErrorMessage.innerText = "리뷰를 10자 이상 작성해 주세요.";
+    }
   };
   document
     .querySelector("#edit-review-confirm-btn")

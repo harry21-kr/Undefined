@@ -20,4 +20,8 @@ export const displayAllReviews = () => {
       }
     }
   });
+  if (reviewCount === 0) {
+    const emptyMessage = `<div id="review-empty-msg"><p>등록된 리뷰가 없습니다.</p><p>첫번째 리뷰어가 되어주세요.<p/></div>`;
+    reviewContainer.innerHTML = emptyMessage;
+  }
 };

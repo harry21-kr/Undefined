@@ -29,7 +29,20 @@ const useMovieDetailData = () => {
     return res.results[0];
   };
 
-  return { getActorsData, getWatchProvidersData, getVideoData };
+  // 비슷한 영화 정보 받아오기
+  const getSimilarMoviesData = async (id) => {
+    const res = await get(
+      `${TMDB_API_URL}/movie/${id}/similar?language=ko-KR&api_key=${API_KEY}`
+    );
+    return res.results.slice(0, 4);
+  };
+
+  return {
+    getActorsData,
+    getWatchProvidersData,
+    getVideoData,
+    getSimilarMoviesData,
+  };
 };
 
 export default useMovieDetailData;

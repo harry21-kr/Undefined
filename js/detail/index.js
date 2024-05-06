@@ -3,15 +3,20 @@ import displayActors from "./displayActors.js";
 import displayProviders from "./displayProviders.js";
 import displayTrailer from "./displayTrailer.js";
 
-const { getActorsData, getWatchProvidersData, getVideoData } =
-  useMovieDetailData();
+const {
+  getActorsData,
+  getWatchProvidersData,
+  getVideoData,
+  getSimilarMoviesData,
+} = useMovieDetailData();
 
 export const movieId = JSON.parse(sessionStorage.getItem("movie")).id;
 
-const [actors, providers, trailer] = await Promise.all([
+const [actors, providers, trailer, similarMovies] = await Promise.all([
   getActorsData(movieId),
   getWatchProvidersData(movieId),
   getVideoData(movieId),
+  getSimilarMoviesData(movieId),
 ]);
 
 const actorsWrap = document.getElementById("actor-row");

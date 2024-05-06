@@ -1,5 +1,5 @@
 import { verifyAndExecute } from "./checkPassword.js";
-import { decrementReviewCount, reviewCount } from "./displayAllReviews.js";
+import { decrementReviewCount, reviewCount } from "./reviewCount.js";
 import { reviewCnt } from "./domElements.js";
 
 export const handleDelete = async (e) => {

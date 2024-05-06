@@ -1,18 +1,15 @@
 import { createReviewElement } from "./handleAdd.js";
 import { reviewContainer } from "./domElements.js";
 import { movieId } from "./index.js";
-
-export let reviewCount = 0;
-export function incrementReviewCount() {
-  reviewCount++;
-}
-export function decrementReviewCount() {
-  reviewCount--;
-}
+import {
+  incrementReviewCount,
+  resetReviewCount,
+  reviewCount,
+} from "./reviewCount.js";
 
 export const displayAllReviews = () => {
   const keys = [];
-  reviewCount = 0;
+  resetReviewCount();
   const allReviews = localStorage.length;
   for (let i = 0; i < allReviews; i++) {
     keys.push(localStorage.key(i));
@@ -22,7 +19,7 @@ export const displayAllReviews = () => {
     {
       const reviewContent = JSON.parse(localStorage.getItem(key));
       if (reviewContent.movieId === movieId) {
-        reviewCount++;
+        incrementReviewCount();
         const reviewRow = createReviewElement(reviewContent, reviewCount, key);
         reviewContainer.appendChild(reviewRow);
       }

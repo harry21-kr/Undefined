@@ -1,4 +1,4 @@
-import { incrementReviewCount, reviewCount } from "./displayAllReviews.js";
+import { incrementReviewCount, reviewCount } from "./reviewCount.js";
 import { reviewCnt, reviewContainer, errorMsgPar } from "./domElements.js";
 import { movieId } from "./index.js";
 

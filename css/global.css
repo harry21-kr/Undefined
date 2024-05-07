@@ -136,9 +136,19 @@ footer > div > a > img {
 
 #ad-banner-wrap {
   width: 1224px;
-  background: var(--primary-color);
   height: 200px;
   border-radius: 12px;
   margin-top: 44px;
   margin-bottom: 44px;
+  overflow: hidden;
+}
+
+#ad-banner-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#ad-banner-wrap img:hover {
+  cursor: pointer;
 }

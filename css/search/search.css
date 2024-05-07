@@ -1,0 +1,103 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body > div {
+  min-height: calc(100vh - 80px);
+}
+
+main {
+  width: 1224px;
+  margin-bottom: 44px;
+}
+
+main > h2 {
+  font-size: var(--font-xl);
+  font-weight: bold;
+}
+
+#movie-wrap {
+  width: 1224px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 22px;
+  margin-bottom: 44px;
+}
+
+#search-result-wrap {
+  min-height: 600px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  padding: 20px 18px 20px 18px;
+  border-radius: 12px;
+  background: var(--primary-color);
+}
+
+.movie-content-wrap {
+  line-height: 1.5;
+  position: relative;
+  cursor: pointer;
+}
+
+.movie-content-wrap > img {
+  width: 220px;
+  height: 300px;
+  border-radius: 12px;
+}
+
+.movie-content-wrap > h4 {
+  white-space: nowrap;
+  width: 200px;
+  font-size: var(--font-lg);
+  font-weight: 500;
+}
+
+.movie-vote-average-text {
+  font-size: var(--font-sm);
+}
+
+.movie-release-date-text {
+  font-size: var(--font-sm);
+}
+
+.movie-rank-text {
+  background: var(--primary-color);
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  top: 12px;
+  left: 12px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.no-search-result-wrap {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.no-search-result-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.no-search-result-text {
+  font-size: var(--font-xl);
+}

@@ -1,13 +1,13 @@
-import useMovieSearchData from "./hook/useMovieSearchData.js";
+import MoviesInfo from "../main/components/MoviesInfo.js";
+import NoSearchResult from "./components/NoSearchResult.js";
 
-const { getSearchedMoviesData } = useMovieSearchData();
+const searchResultWrap = document.getElementById("search-result-wrap");
+const searchResultTitle = document.getElementById("search-result-title");
 
-const searchInput = document.getElementById("search-input");
+const searchedMovieData = JSON.parse(sessionStorage.getItem("searchedMovie"));
+const element = searchedMovieData.data.length
+  ? MoviesInfo(searchedMovieData.data)
+  : NoSearchResult(searchedMovieData.keyword);
 
-searchInput.addEventListener("change", async (e) => {
-  const searchedData = await getSearchedMoviesData(1, e.target.value);
-  if (searchedData.length) {
-    sessionStorage.setItem("searchedMovie", JSON.stringify(searchedData));
-  }
-  location.href = "search.html";
-});
+searchResultWrap.innerHTML = element;
+searchResultTitle.innerText = `${searchedMovieData.keyword}의 검색 결과 (${searchedMovieData.data.length}건)`;

@@ -12,6 +12,8 @@ function movieData() {
   movieTitle.textContent = `${movieData.title}`;
   movieFeature.textContent = `${movieData.release_date}`;
   movieOverview.textContent = `${movieData.overview}`;
+  movieOverview.style.fontSize = "16px";
+  movieOverview.style.lineHeight = "23px";
 }
 movieData();
 // 영화제목 영화설명//

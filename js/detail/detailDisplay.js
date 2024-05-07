@@ -15,7 +15,7 @@ function movieData() {
     this.src = `${DEFAULT_MOVIE_IMAGE}`;
   };
 
-  movieRate.textContent = `평점 : ${movieData.vote_average}`;
+  movieRate.textContent = `평점 : ${movieData.vote_average.toFixed(1)}`;
   movieTitle.textContent = `${movieData.title}`;
   movieFeature.textContent = `${movieData.release_date}`;
   movieOverview.textContent = `${movieData.overview}`;

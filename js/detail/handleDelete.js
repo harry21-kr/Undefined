@@ -21,6 +21,6 @@ const deleteReview = (localStorageKey) => {
     reviewCnt.innerHTML = "";
     displayEmptyMessage();
   } else {
-    reviewCnt.innerHTML = `댓글 ${reviewCount}`;
+    reviewCnt.innerHTML = `리뷰 ${reviewCount}`;
   }
 };

@@ -16,8 +16,9 @@ export const displayAllReviews = () => {
   }
   const sortedKeys = keys.map((key) => Number(key)).sort((a, b) => a - b);
   sortedKeys.forEach((key) => {
-    {
-      const reviewContent = JSON.parse(localStorage.getItem(key));
+    const reviewContentString = localStorage.getItem(key);
+    if (reviewContentString) {
+      const reviewContent = JSON.parse(reviewContentString);
       if (reviewContent.movieId === movieId) {
         incrementReviewCount();
         const reviewRow = createReviewElement(reviewContent, reviewCount, key);
@@ -25,9 +26,7 @@ export const displayAllReviews = () => {
       }
     }
   });
-  if (reviewCount === 0) {
-    displayEmptyMessage();
-  }
+  !reviewCount && displayEmptyMessage();
 };
 
 export function displayEmptyMessage() {

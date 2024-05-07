@@ -90,10 +90,12 @@ main {
 
 #review-box-bottom {
   display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 #review-content-box {
-  width: 90%;
+  width: 100%;
 }
 
 #review-detail-box {
@@ -142,7 +144,20 @@ main {
   text-align: right;
 }
 
+/* 수정 입력란 스타일 */
+
 #edit-review-input {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
+}
+
+#edit-review-confirm-btn-container {
+  display: flex;
+  justify-content: end;
+  margin-top: 0.5rem;
+}
+
+#edit-review-error-message {
+  margin-top: 1rem;
+  color: aqua;
 }

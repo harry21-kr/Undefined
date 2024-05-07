@@ -13,3 +13,4 @@ export const passwordModalCancelBtn = document.querySelector(
 export const passwordErrorModal = document.querySelector(
   "#password-error-modal"
 );
+export const errorMsgPar = document.querySelector("#input-error-msg");

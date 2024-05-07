@@ -14,12 +14,17 @@
   </head>
   <body>
     <header>
-      <div id="title-wrapper">
-        <h1>Undefined</h1>
-      </div>
-      <div id="search-form-wrapper">
+      <div>
+        <a href="index.html">
+          <img src="img/logo.png" />
+          <h1>movie.boobie</h1>
+        </a>
         <form id="search-form">
-          <input id="search-input" type="text" placeholder="Search.." />
+          <input
+            id="search-input"
+            type="text"
+            placeholder="찾고싶은 영화를 입력해보세요"
+          />
           <button id="search-btn">검색</button>
         </form>
       </div>
@@ -29,8 +34,14 @@
       <div id="movie-title-wrap">
         <h2>살면서 한번쯤은 봐야할 영화</h2>
         <div id="movie-button-wrap">
-          <button id="top-rated-movies-previous-button" type="button"><</button>
-          <button id="top-rated-movies-next-button">></button>
+          <button
+            id="top-rated-movies-previous-button"
+            class="prev-btn"
+            type="button"
+          >
+            <
+          </button>
+          <button id="top-rated-movies-next-button" class="next-btn">></button>
         </div>
       </div>
       <div id="top-rated-movies-wrap"></div>
@@ -39,8 +50,10 @@
       <div id="movie-title-wrap">
         <h2>인기있는 영화</h2>
         <div id="movie-button-wrap">
-          <button id="popular-movies-previous-button"><</button>
-          <button id="popular-movies-next-button">></button>
+          <button id="popular-movies-previous-button" class="prev-btn">
+            <
+          </button>
+          <button id="popular-movies-next-button" class="next-btn">></button>
         </div>
       </div>
       <div id="popular-movies-wrap"></div>
@@ -49,15 +62,23 @@
       <div id="movie-title-wrap">
         <h2>개봉예정 영화</h2>
         <div id="movie-button-wrap">
-          <button id="upcoming-movies-previous-button"><</button>
-          <button id="upcoming-movies-next-button">></button>
+          <button id="upcoming-movies-previous-button" class="prev-btn">
+            <
+          </button>
+          <button id="upcoming-movies-next-button" class="next-btn">></button>
         </div>
       </div>
       <div id="upcoming-movies-wrap"></div>
     </section>
     <footer>
-      <div id="footer-wrapper">
-        <p>푸터</p>
+      <div>
+        <div>
+          <h4>movie.boobie</h4>
+          <p>당신의 최애 영화를 찾아보세요.</p>
+        </div>
+        <a href="https://github.com/harry21-kr/undefined" target="_blank"
+          ><img src="img/github.webp"
+        /></a>
       </div>
     </footer>
   </body>

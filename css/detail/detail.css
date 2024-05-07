@@ -1,26 +1,29 @@
 @import url("./password-modal.css");
 
-#wrap {
-  height: auto;
-  min-height: 100%;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
-  min-height: 600;
+  max-width: 1224px;
+  width: 100%;
 }
 
-#backdrop-wrapper {
+#trailer-wrapper {
   display: flex;
   height: 500px;
   background-color: dimgray;
 }
 
-#main-wrapper {
-  padding: 0 100px;
+#trailer-video {
+  width: 100%;
 }
 
 #info-box-wrapper {
-  height: 350px;
+  height: 400px;
   margin: 50px 0;
   display: flex;
   justify-content: space-between;
@@ -34,106 +37,59 @@ main {
 #poster-wrapper img {
   height: 100%;
   width: 100%;
+  border-radius: 12px;
 }
 
 #movie-overall-info-wrapper {
+  width: 660px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  width: 60%;
-  height: 100%;
-  margin: 0 30px;
+  justify-content: space-between;
 }
 
 #movie-basic-info-wrapper {
-  display: block;
+  display: flex;
+  gap: 12px;
+  align-items: self-end;
 }
 
 #movie-title {
-  display: inline-block;
   font-size: 40px;
 }
 
 #movie-feature {
-  display: inline-block;
-  font-size: 14px;
-}
-
-#movie-overview {
-  margin-top: 30px;
-  font-size: 16px;
+  font-size: var(--font-sm);
 }
 
 #movie-rate {
-  margin-top: 10px;
-  font-size: 18px;
-}
-
-#movie-platform-box {
-  margin-top: auto;
-}
-
-#cast-info-wrapper {
-  width: 16%;
-  height: 100%;
-  border: solid 1px black;
-  border-radius: 10px;
-}
-
-#cast-info-box {
-  padding: 20px;
-}
-
-#cast-label {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-#cast-list {
-  margin-top: 30px;
-}
-
-#cast-row {
-  display: block;
-}
-
-#cast-image {
-  display: inline-block;
-}
-
-#cast-name {
-  display: inline-block;
+  font-size: var(--font-lg);
 }
 
 #reviews-wrapper {
-  height: 300px;
-  padding: 100px 0;
+  background: var(--primary-color);
+  padding: 40px 24px 40px 24px;
   margin-bottom: 20px;
-  border: solid 1px black;
   border-radius: 10px;
 }
 
-#review-cnt {
-  margin: 0 30px;
-}
-
 #review-row {
-  margin: 30px;
-  padding: 20px;
-  border: solid 1px black;
+  background: #596279;
+  margin-top: 44px;
+  padding: 18px 16px 18px 16px;
   border-radius: 10px;
 }
 
 #review-box-top {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 15px;
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px white;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 #review-box-bottom {
   display: flex;
-  justify-content: space-between;
-  padding-top: 15px;
 }
 
 #review-content-box {
@@ -158,8 +114,8 @@ main {
 
 /* 리뷰 입력란 스타일 */
 #review-form-wrapper {
-  height: 150px;
-  border: solid 1px black;
+  background: var(--primary-color);
+  height: 260px;
   border-radius: 10px;
 }
 
@@ -185,14 +141,8 @@ main {
   margin-top: 10px;
   text-align: right;
 }
-.i_btn{
-background-color:transparent ;
-border: none;
-cursor: pointer;
-}
-.fa-solid{
-  display: none;
-}
-.fa-regular{
-  display: block;
+
+#edit-review-input {
+  width: 90%;
+  height: 90%;
 }

@@ -38,23 +38,27 @@ export const handleSubmit = (e) => {
     alert(errorMessage);
     return;
   }
+
   const date = new Date();
   const submittedAt = `${date.getFullYear()}-${
     date.getMonth() + 1
   }-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
-  review = { ...review, submittedAt, movieId: "/" };
   const key = date.getTime();
+  review = {
+    ...review,
+    submittedAt,
+    movieId: "/",
+    numCount: ``,
+  };
 
   localStorage.setItem(key, JSON.stringify(review));
   addReview(review, key);
-  likeIcon();
+  likeIcon(key);
 };
 
 function addReview(review, key) {
   const reviewRow = createReviewElement(review, key);
-
   reviewContainer.appendChild(reviewRow);
-  likeIcon();
 }
 
 export function createReviewElement(reviewContent, key) {
@@ -64,7 +68,6 @@ export function createReviewElement(reviewContent, key) {
   const reviewRow = document.createElement("li");
   reviewRow.setAttribute("id", "review-row");
   reviewRow.setAttribute("data-key", key);
-
   reviewRow.innerHTML = `
   <div id="review-box-top">
                     <p id="username-display">${username}</p>
@@ -81,11 +84,11 @@ export function createReviewElement(reviewContent, key) {
                     </div>
                     <div id="review-detail-box">
                       <p id="review-time">${submittedAt}</p>
-                      <div id="event">
-                      <i class="fa-solid fa-heart"></i>
-                      <i class="fa-regular fa-heart"></i>
+                      <div id="${key}">
+                      <i class="fa-solid fa-heart" id="fa-solid${key}"></i>
+                      <i class="fa-regular fa-heart"id="fa-regular${key}"></i>
                       </div>
-                      <p id="count"></p>
+                      <p id="count${key}"></p>
                       </div>
                     
                   </div>

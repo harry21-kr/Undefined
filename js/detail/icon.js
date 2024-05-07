@@ -1,12 +1,12 @@
-export default function likeIcon() {
+export default function likeIcon(key) {
   document.onselectstart = function () {
     return false;
   };
 
-  const icon = document.querySelector(".fa-regular");
-  const iconSolid = document.querySelector(".fa-solid");
-  const select = document.getElementById("event");
-  const count = document.getElementById("count");
+  const icon = document.querySelector(`#fa-regular${key}`);
+  const iconSolid = document.querySelector(`#fa-solid${key}`);
+  const select = document.getElementById(`${key}`);
+  const count = document.getElementById(`count${key}`);
 
   // default 값
   select.style.display = "inline-block";
@@ -34,4 +34,5 @@ export default function likeIcon() {
     count.textContent = `좋아요 : ${num}`;
   }
 }
+
 // likeIcon();

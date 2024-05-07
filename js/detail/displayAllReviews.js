@@ -1,6 +1,6 @@
 import { createReviewElement } from "./handleAdd.js";
 import { reviewContainer } from "./domElements.js";
-
+import likeIcon from "./icon.js";
 export const displayAllReviews = () => {
   const keys = [];
   const allReviews = localStorage.length;
@@ -14,6 +14,7 @@ export const displayAllReviews = () => {
       if (reviewContent) {
         const reviewRow = createReviewElement(reviewContent, key);
         reviewContainer.appendChild(reviewRow);
+        likeIcon(key);
       }
     }
   });

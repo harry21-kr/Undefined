@@ -1,4 +1,7 @@
-import { TMDB_IMAGE_URL } from "../config/constants/index.js";
+import {
+  DEFAULT_MOVIE_IMAGE,
+  TMDB_IMAGE_URL,
+} from "../config/constants/index.js";
 function movieData() {
   const movieData = JSON.parse(sessionStorage.getItem("movie"));
   const moviePoster = document.querySelector("#poster-wrapper");
@@ -8,6 +11,10 @@ function movieData() {
   const movieOverview = document.getElementById("movie-overview");
   const movieRate = document.getElementById("movie-rate");
   movieElementChildren[0].src = `${TMDB_IMAGE_URL}${movieData.poster_path}`;
+  movieElementChildren[0].onerror = function () {
+    this.src = `${DEFAULT_MOVIE_IMAGE}`;
+  };
+
   movieRate.textContent = `평점 : ${movieData.vote_average}`;
   movieTitle.textContent = `${movieData.title}`;
   movieFeature.textContent = `${movieData.release_date}`;

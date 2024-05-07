@@ -67,7 +67,10 @@ function addReview(review, key) {
 
 export function createReviewElement(reviewContent, reviewCount, key) {
   const { username, review, submittedAt } = reviewContent;
-  reviewCnt.innerHTML = `댓글 ${reviewCount}개`;
+  const reviewEmptyMessage = document.querySelector("#review-empty-msg");
+  reviewEmptyMessage && reviewEmptyMessage.remove();
+  reviewCnt.innerHTML = `댓글 ${reviewCount}`;
+
   const reviewRow = document.createElement("li");
   reviewRow.setAttribute("id", "review-row");
   reviewRow.setAttribute("data-key", key);
@@ -75,8 +78,8 @@ export function createReviewElement(reviewContent, reviewCount, key) {
   <div id="review-box-top">
                     <p id="username-display">${username}</p>
                     <div id="review-btn-box">
-                      <button id="edit-review-btn" data-key=${key}>수정</button>
-                      <button id="delete-review-btn" data-key=${key}>삭제</button>
+                      <button id="edit-review-btn" class="detail-btn" data-key=${key}>수정</button>
+                      <button id="delete-review-btn" class="detail-btn" data-key=${key}>삭제</button>
                     </div>
                   </div>
                   <div id="review-box-bottom">
@@ -93,7 +96,6 @@ export function createReviewElement(reviewContent, reviewCount, key) {
                       </div>
                       <p id="count${key}"></p>
                       </div>
-                    
                   </div>
                   <p id="edit-review-error-message"></p>
   `;

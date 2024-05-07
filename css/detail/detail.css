@@ -73,7 +73,13 @@ main {
   border-radius: 10px;
 }
 
+#review-cnt {
+  font-size: 1.5rem;
+}
+
 #review-row {
+  position: relative;
+  min-height: 7rem;
   background: #596279;
   margin-top: 44px;
   padding: 18px 16px 18px 16px;
@@ -88,36 +94,108 @@ main {
   margin-bottom: 12px;
 }
 
+.detail-btn {
+  width: 4rem;
+  height: 1.7rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+.detail-btn:hover {
+  cursor: pointer;
+}
+
+#review-btn-box {
+  display: flex;
+  justify-content: space-between;
+  width: 14%;
+}
+
+#delete-review-btn {
+  color: var(--red-color);
+  border: 1px solid var(--red-color);
+}
+
 #review-box-bottom {
   display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 #review-content-box {
-  width: 90%;
+  width: 100%;
+  height: 100%;
+}
+
+#review-display {
+  line-height: 1.3rem;
 }
 
 #review-detail-box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 10%;
+  min-height: 4rem;
+  width: 12%;
   text-align: right;
 }
 
 #review-time {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 #like-count {
   font-size: 18px;
 }
 
+#heart-icon {
+  color: var(--red-color);
+  margin-right: 0.2rem;
+}
+
 /* 리뷰 입력란 스타일 */
 #review-form-wrapper {
   background: var(--primary-color);
-  height: 260px;
   border-radius: 10px;
+  margin-bottom: 50px; /*여기*/
 }
+
+/*여기부터*/
+textarea {
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+.review-input {
+  border-radius: 6px;
+  border: none;
+
+  background: var(--navy-color);
+  color: white;
+  transition: background 0.5s;
+  height: 30px;
+}
+.review-input:focus {
+  outline: none;
+  background: var(--secondary-color);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.review-input::-webkit-scrollbar {
+  display: none;
+}
+
+.review-text {
+  border-radius: 7px;
+  height: 60px;
+}
+
+#input-error-msg {
+  text-align: left;
+}
+/*여기까지*/
 
 #review-form {
   padding: 20px;
@@ -142,7 +220,23 @@ main {
   text-align: right;
 }
 
+/* 수정 입력란 스타일 */
+
 #edit-review-input {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  min-height: 4rem;
+  height: 100%;
+  overflow-y: auto;
+}
+
+#edit-review-confirm-btn-container {
+  display: flex;
+  justify-content: end;
+  margin-top: 0.5rem;
+}
+
+#edit-review-error-message {
+  position: absolute;
+  bottom: 2rem;
+  color: var(--red-color);
 }

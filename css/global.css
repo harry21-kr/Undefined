@@ -16,6 +16,7 @@
   --navy-color: #1f2a37;
   --primary-color: #384250;
   --secondary-color: #1c1d1f;
+  --red-color: #ff5353;
 }
 
 body {
@@ -131,4 +132,13 @@ footer > div > a {
 
 footer > div > a > img {
   width: 36px;
+}
+
+#ad-banner-wrap {
+  width: 1224px;
+  background: var(--primary-color);
+  height: 200px;
+  border-radius: 12px;
+  margin-top: 44px;
+  margin-bottom: 44px;
 }

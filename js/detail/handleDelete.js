@@ -1,4 +1,5 @@
 import { verifyAndExecute } from "./checkPassword.js";
+import { decrementReviewCount, reviewCount } from "./reviewCount.js";
 import { reviewCnt } from "./domElements.js";
 
 export const handleDelete = async (e) => {
@@ -9,7 +10,8 @@ export const handleDelete = async (e) => {
 
 const deleteReview = (localStorageKey) => {
   localStorage.removeItem(localStorageKey);
-  reviewCnt.innerHTML = `댓글 ${localStorage.length}개`;
+  decrementReviewCount();
+  reviewCnt.innerHTML = `댓글 ${reviewCount}개`;
 
   const toBeDeleted = document.querySelector(
     `#review-row[data-key="${localStorageKey}"]`

@@ -62,7 +62,7 @@ export function createReviewElement(reviewContent, reviewCount, key) {
   const { username, review, submittedAt } = reviewContent;
   const reviewEmptyMessage = document.querySelector("#review-empty-msg");
   reviewEmptyMessage && reviewEmptyMessage.remove();
-  reviewCnt.innerHTML = `댓글 ${reviewCount}`;
+  reviewCnt.innerHTML = `리뷰 ${reviewCount}`;
 
   const reviewRow = document.createElement("li");
   reviewRow.setAttribute("id", "review-row");

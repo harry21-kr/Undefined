@@ -1,7 +1,7 @@
 import { incrementReviewCount, reviewCount } from "./reviewCount.js";
 import { reviewCnt, reviewContainer, errorMsgPar } from "./domElements.js";
 import { movieId } from "./index.js";
-
+import likeIcon from "./icon.js";
 export const handleSubmit = (e) => {
   let review = {};
   let errorMessage = "";
@@ -44,6 +44,12 @@ export const handleSubmit = (e) => {
   }-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
   review = { ...review, submittedAt, movieId };
   const key = date.getTime();
+  review = {
+    ...review,
+    submittedAt,
+    movieId: "/",
+    numCount: ``,
+  };
 
   localStorage.setItem(key, JSON.stringify(review));
   addReview(review, key);
@@ -56,6 +62,7 @@ function addReview(review, key) {
   incrementReviewCount();
   const reviewRow = createReviewElement(review, reviewCount, key);
   reviewContainer.appendChild(reviewRow);
+  likeIcon(key);
 }
 
 export function createReviewElement(reviewContent, reviewCount, key) {
@@ -83,10 +90,15 @@ export function createReviewElement(reviewContent, reviewCount, key) {
                     </div>
                     <div id="review-detail-box">
                       <p id="review-time">${submittedAt}</p>
-                      <p id="like-count"><span id="heart-icon">♥</span><span>7</span></p>
-                    </div>
+                      <div id="${key}">
+                      <i class="fa-solid fa-heart" id="fa-solid${key}"></i>
+                      <i class="fa-regular fa-heart"id="fa-regular${key}"></i>
+                      </div>
+                      <p id="count${key}"></p>
+                      </div>
                   </div>
                   <p id="edit-review-error-message"></p>
   `;
+
   return reviewRow;
 }

@@ -180,6 +180,11 @@ textarea {
 .review-input:focus {
   outline: none;
   background: var(--secondary-color);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.review-input::-webkit-scrollbar {
+  display: none;
 }
 
 .review-text {
@@ -221,6 +226,7 @@ textarea {
   width: 100%;
   min-height: 4rem;
   height: 100%;
+  overflow-y: auto;
 }
 
 #edit-review-confirm-btn-container {

@@ -117,9 +117,33 @@ main {
 /* 리뷰 입력란 스타일 */
 #review-form-wrapper {
   background: var(--primary-color);
-  height: 260px;
   border-radius: 10px;
+  margin-bottom: 50px; /*여기*/
 }
+
+/*여기부터*/
+.review-input {
+  border-radius: 6px;
+  border: none;
+  background: var(--navy-color);
+  color: white;
+  transition: background 0.5s;
+  height: 30px;
+}
+.review-input:focus {
+  outline: none;
+  background: var(--secondary-color);
+}
+
+.review-text {
+  border-radius: 7px;
+  height: 60px;
+}
+
+#input-error-msg {
+  text-align: left;
+}
+/*여기까지*/
 
 #review-form {
   padding: 20px;

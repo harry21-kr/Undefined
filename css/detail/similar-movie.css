@@ -1,0 +1,30 @@
+#similar-movies-label {
+  font-size: var(--font-xl);
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+#similar-movies-list {
+  background: var(--primary-color);
+  border-radius: 20px;
+  padding: 18px 34px;
+  margin-bottom: 32px;
+}
+
+#similar-movie-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#similar-movie-img {
+  width: 220px;
+  height: 300px;
+  border-radius: 12px;
+}
+
+#similar-movie-title {
+  margin-top: 12px;
+  text-align: center;
+  font-size: var(--font-lg);
+  font-weight: bold;
+}

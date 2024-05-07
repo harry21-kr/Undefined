@@ -132,3 +132,12 @@ footer > div > a {
 footer > div > a > img {
   width: 36px;
 }
+
+#ad-banner-wrap {
+  width: 1224px;
+  background: var(--primary-color);
+  height: 200px;
+  border-radius: 12px;
+  margin-top: 44px;
+  margin-bottom: 44px;
+}

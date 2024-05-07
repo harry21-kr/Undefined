@@ -36,9 +36,9 @@
   height: 60px;
   object-fit: cover;
   border-radius: 12px;
-  border: 1px soild black;
+  border: 1px solid black;
 }
 
 #actor-name {
-  font-size: var(--font-lg);
+  font-size: var(--font-base);
 }

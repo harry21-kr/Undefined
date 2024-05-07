@@ -1,4 +1,7 @@
-import { TMDB_IMAGE_URL } from "../../config/constants/index.js";
+import {
+  DEFAULT_MOVIE_IMAGE,
+  TMDB_IMAGE_URL,
+} from "../../config/constants/index.js";
 
 export default function MoviesInfo(data) {
   const movieElements = data
@@ -14,7 +17,10 @@ export default function MoviesInfo(data) {
           class="movie-content-wrap"
           onclick="sessionStorage.setItem('movie', decodeURIComponent('${encodedMovie}')); location.href=decodeURIComponent('${encodedDetailPageLink}')"
         >
-          <img src="${TMDB_IMAGE_URL}${movie.poster_path}" />
+        <img src="${TMDB_IMAGE_URL}${
+        movie.poster_path
+      }" onerror="this.src='${DEFAULT_MOVIE_IMAGE}';"
+     />
           <h4 class="movie-title">${movie.title}</h4>
           <p class="movie-vote-average-text">
             평점: ${movie.vote_average.toFixed(1)}점

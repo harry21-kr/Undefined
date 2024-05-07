@@ -46,8 +46,6 @@ export const handleSubmit = (e) => {
   const key = date.getTime();
   review = {
     ...review,
-    submittedAt,
-    movieId: "/",
     numCount: ``,
   };
 

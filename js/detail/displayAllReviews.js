@@ -6,7 +6,7 @@ import {
   resetReviewCount,
   reviewCount,
 } from "./reviewCount.js";
-
+import likeIcon from "./icon.js";
 export const displayAllReviews = () => {
   const keys = [];
   resetReviewCount();

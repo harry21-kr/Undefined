@@ -39,10 +39,17 @@ export const handleSubmit = (e) => {
   }
 
   const date = new Date();
-  const submittedAt = `${date.getFullYear()}-${
-    date.getMonth() + 1
-  }-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
+  const [year, month, day, hour, minute] = [
+    date.getFullYear(),
+    (date.getMonth() + 1).toString().padStart(2, "0"),
+    date.getDate().toString().padStart(2, "0"),
+    date.getHours().toString().padStart(2, "0"),
+    date.getMinutes().toString().padStart(2, "0"),
+  ];
+
+  const submittedAt = `${year}-${month}-${day} ${hour}:${minute}`;
   review = { ...review, submittedAt, movieId };
+
   const key = date.getTime();
   review = {
     ...review,

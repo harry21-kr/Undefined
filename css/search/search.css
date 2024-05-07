@@ -36,7 +36,7 @@ main {
 
 #movie-wrap > div:nth-child(1) > select {
   width: 100px;
-  background: var(--secondary-color);
+  background: none;
   color: white;
   font-size: var(--font-sm);
   padding: 6px;

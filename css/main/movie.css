@@ -61,7 +61,8 @@
 .movie-content-wrap > h4 {
   white-space: nowrap;
   width: 200px;
-  font-size: var(--font-lg);
+  /* font-size: var(--font-lg); */
+  font-size: 15pt;
   font-weight: 500;
 }
 

@@ -27,9 +27,9 @@ const displayEditInput = (reviewContentBox, textContent, localStorageKey) => {
   reviewBtnBox.style.display = "none";
   reviewDetailBox.style.display = "none";
 
-  reviewContentBox.innerHTML = `<textarea id="edit-review-input">${textContent}</textarea>
+  reviewContentBox.innerHTML = `<textarea id="edit-review-input" class="review-input">${textContent}</textarea>
   <div id="edit-review-confirm-btn-container">
-  <button id="edit-review-confirm-btn">확인</button>
+  <button id="edit-review-confirm-btn" class="detail-btn">확인</button>
   </div>
   `;
 

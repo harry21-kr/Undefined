@@ -109,7 +109,7 @@ main {
 #review-btn-box {
   display: flex;
   justify-content: space-between;
-  width: 14%;
+  width: 8.5rem;
 }
 
 #delete-review-btn {

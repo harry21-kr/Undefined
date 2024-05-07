@@ -83,6 +83,7 @@ export function createReviewElement(reviewContent, reviewCount, key) {
                       <p id="like-count">♥ 7</p>
                     </div>
                   </div>
+                  <p id="edit-review-error-message"></p>
   `;
   return reviewRow;
 }

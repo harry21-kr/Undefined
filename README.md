@@ -98,3 +98,75 @@
 ### *refactor branch*
 
 개발되었던 코드를 리팩토링하는 브랜치입니다.
+
+## 프로젝트 디렉토리 구조
+
+```
+┣ 📂 css
+┃ ┣ 📂 detail
+┃ ┃ ┣ 📜 actors.css
+┃ ┃ ┣ 📜 detail.css
+┃ ┃ ┣ 📜 password-modal.css
+┃ ┃ ┣ 📜 providers.css
+┃ ┃ ┗ 📜 similar-movie.css
+┃ ┣ 📂 main
+┃ ┃ ┣ 📜 main.css
+┃ ┃ ┗ 📜 movie.css
+┃ ┣ 📂 search
+┃ ┃ ┗ 📜 search.css
+┃ ┣ 📜 global.css
+┃ ┗ 📜 reset.css
+┣ 📂 img
+┃ ┣ 📜 github.webp
+┃ ┣ 📜 logo.png
+┃ ┣ 📜 main-page-ad-banner.png
+┃ ┣ 📜 sad_emogi.png
+┃ ┗ 📜 search-page-ad-banner.png
+┣ 📂 js
+┃ ┣ 📂 config
+┃ ┃ ┗ 📂 constants
+┃ ┃   ┗ 📜 index.js
+┃ ┣ 📂 detail
+┃ ┃ ┣ 📂 display
+┃ ┃ ┃ ┣ 📜 displayActors.js
+┃ ┃ ┃ ┣ 📜 displayMovieDetail.js
+┃ ┃ ┃ ┣ 📜 displayProviders.js
+┃ ┃ ┃ ┣ 📜 displaySimilarMovies.js
+┃ ┃ ┃ ┗ 📜 displayTrailer.js
+┃ ┃ ┣ 📂 hook
+┃ ┃ ┃ ┗ 📜 useMovieDetailData.js
+┃ ┃ ┣ 📂 review
+┃ ┃ ┃ ┣ 📜 checkPassword.js
+┃ ┃ ┃ ┣ 📜 displayAllReviews.js
+┃ ┃ ┃ ┣ 📜 domElements.js
+┃ ┃ ┃ ┣ 📜 handleAdd.js
+┃ ┃ ┃ ┣ 📜 handleDelete.js
+┃ ┃ ┃ ┣ 📜 handleEdit.js
+┃ ┃ ┃ ┣ 📜 initReviews.js
+┃ ┃ ┃ ┗ 📜 reviewCount.js
+┃ ┃ ┣ 📜 icon.js
+┃ ┃ ┗ 📜 index.js
+┃ ┣ 📂 main
+┃ ┃ ┣ 📂 components
+┃ ┃ ┃ ┗ 📜 MoviesInfo.js
+┃ ┃ ┣ 📂 hook
+┃ ┃ ┃ ┗ 📜 useMovieData.js
+┃ ┃ ┣ 📜 addMovieAnimation.js
+┃ ┃ ┗ 📜 index.js
+┃ ┣ 📂 search
+┃ ┃ ┣ 📂 components
+┃ ┃ ┃ ┗ 📜 NoSearchResult.js
+┃ ┃ ┣ 📂 hook
+┃ ┃ ┃ ┗ 📜 useMovieSearchData.js
+┃ ┃ ┣ 📜 addSearchEvent.js
+┃ ┃ ┗ 📜 index.js
+┃ ┗ 📂 utils
+┃   ┗ 📜 index.js
+┣ 📜.DS_Store
+┣ 📜 .gitignore
+┣ 📜 detail.html
+┣ 📜 index.html
+┣ 📜 README.md
+┗ 📜 search.html
+```
+

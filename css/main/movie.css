@@ -37,7 +37,7 @@
   background: var(--primary-color);
 }
 
-#upcoming-movies-wrap {
+#trending-movies-wrap {
   width: fit-content;
   display: flex;
   gap: 22px;

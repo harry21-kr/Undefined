@@ -1,6 +1,7 @@
 import MoviesInfo from "./components/MoviesInfo.js";
 import useMovieData from "./hook/useMovieData.js";
 import addMovieAnimation from "./addMovieAnimation.js";
+import addSearchEvent from "../search/addSearchEvent.js";
 
 const { getPopularMovies, getTopRatedMovies, getTrendingMovies } =
   useMovieData();
@@ -57,3 +58,5 @@ addMovieAnimation(
   trendingMoviesNextBtn,
   trendingMoviesPrevBtn
 );
+
+addSearchEvent();

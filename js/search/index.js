@@ -1,4 +1,5 @@
 import MoviesInfo from "../main/components/MoviesInfo.js";
+import addSearchEvent from "./addSearchEvent.js";
 import NoSearchResult from "./components/NoSearchResult.js";
 
 const searchResultWrap = document.getElementById("search-result-wrap");
@@ -38,3 +39,5 @@ searchResultSelect.addEventListener("change", (e) => {
     return;
   }
 });
+
+addSearchEvent();

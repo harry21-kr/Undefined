@@ -3,6 +3,7 @@ import displayActors from "./displayActors.js";
 import displayProviders from "./displayProviders.js";
 import displayTrailer from "./displayTrailer.js";
 import displaySimilarMovies from "./displaySimilarMovies.js";
+import addSearchEvent from "../search/addSearchEvent.js";
 
 const {
   getActorsData,
@@ -36,3 +37,5 @@ if (providerElements) {
 }
 trailerWrap.innerHTML = trailerElement;
 similarMoviesWrap.innerHTML = similarMovieElements;
+
+addSearchEvent();

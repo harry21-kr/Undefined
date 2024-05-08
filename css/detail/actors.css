@@ -24,14 +24,14 @@
   gap: 14px;
 }
 
-#actor-wrapper {
+.actor-wrapper {
   display: flex;
   gap: 12px;
   align-items: center;
   overflow: hidden;
 }
 
-#actor-img {
+.actor-img {
   width: 60px;
   height: 60px;
   object-fit: cover;
@@ -39,6 +39,6 @@
   border: 1px solid black;
 }
 
-#actor-name {
+.actor-name {
   font-size: var(--font-base);
 }

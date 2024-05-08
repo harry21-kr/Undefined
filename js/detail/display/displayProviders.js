@@ -5,7 +5,7 @@ export default function displayProviders(data) {
     const providerElements = data
       .map((provider) => {
         return `
-            <img id="provider-img" src="${TMDB_IMAGE_URL}${provider.logo_path}" />
+            <img class="provider-img" src="${TMDB_IMAGE_URL}${provider.logo_path}" />
           `;
       })
       .reduce((acc, cur) => acc + cur, []);

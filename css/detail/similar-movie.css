@@ -16,7 +16,7 @@
   justify-content: space-evenly;
 }
 
-#similar-movie-img {
+.similar-movie-img {
   width: 220px;
   height: 300px;
   border-radius: 12px;

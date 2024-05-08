@@ -12,7 +12,7 @@ export default function displaySimilarMovies(data) {
 
         return `
           <div style="cursor: pointer;" onclick="sessionStorage.setItem('movie', decodeURIComponent('${encodedMovie}')); location.reload()">
-            <img id="similar-movie-img" src="${TMDB_IMAGE_URL}${similarMovie.poster_path}" onerror="this.src='${DEFAULT_MOVIE_IMAGE}';" />
+            <img class="similar-movie-img" src="${TMDB_IMAGE_URL}${similarMovie.poster_path}" onerror="this.src='${DEFAULT_MOVIE_IMAGE}';" />
             <p class="similar-movie-title">${similarMovie.title}</p>
           </div>
           `;

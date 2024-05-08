@@ -22,9 +22,13 @@
   border-radius: 12px;
 }
 
-#similar-movie-title {
+.similar-movie-title {
   margin-top: 12px;
   text-align: center;
   font-size: var(--font-lg);
   font-weight: bold;
+  width: 220px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

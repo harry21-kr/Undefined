@@ -14,11 +14,6 @@ main {
   margin-bottom: 44px;
 }
 
-main > h2 {
-  font-size: var(--font-xl);
-  font-weight: bold;
-}
-
 #movie-wrap {
   width: 1224px;
   display: flex;
@@ -26,6 +21,28 @@ main > h2 {
   overflow: hidden;
   gap: 22px;
   margin-bottom: 44px;
+}
+
+#movie-wrap > div:nth-child(1) {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#movie-wrap > div:nth-child(1) > h2 {
+  font-size: var(--font-xl);
+  font-weight: bold;
+}
+
+#movie-wrap > div:nth-child(1) > select {
+  width: 100px;
+  background: none;
+  color: white;
+  font-size: var(--font-sm);
+  padding: 6px;
+  outline: none;
+  border: 1px soild white;
+  border-radius: 6px;
 }
 
 #search-result-wrap {

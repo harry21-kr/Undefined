@@ -1,4 +1,7 @@
-import { TMDB_IMAGE_URL } from "../config/constants/index.js";
+import {
+  DEFAULT_MOVIE_IMAGE,
+  TMDB_IMAGE_URL,
+} from "../config/constants/index.js";
 
 export default function displaySimilarMovies(data) {
   if (data) {
@@ -8,7 +11,7 @@ export default function displaySimilarMovies(data) {
         const encodedMovie = encodeURIComponent(JSON.stringify(similarMovie));
         return `
           <div style="cursor: pointer;" onclick="sessionStorage.setItem('movie', decodeURIComponent('${encodedMovie}')); location.reload()">
-            <img id="similar-movie-img" src="${TMDB_IMAGE_URL}${similarMovie.poster_path}" />
+            <img id="similar-movie-img" src="${TMDB_IMAGE_URL}${similarMovie.poster_path}" onerror="this.src='${DEFAULT_MOVIE_IMAGE}';" />
             <p id="similar-movie-title">${similarMovie.title}</p>
           </div>
           `;

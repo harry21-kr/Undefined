@@ -1,4 +1,4 @@
-import { YOUTUBE_VIDEO_URL } from "../config/constants/index.js";
+import { YOUTUBE_VIDEO_URL } from "../../config/constants/index.js";
 
 export default function displayTrailer(data) {
   const trailerElement = `

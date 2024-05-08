@@ -1,4 +1,4 @@
-import { TMDB_IMAGE_URL } from "../config/constants/index.js";
+import { TMDB_IMAGE_URL } from "../../config/constants/index.js";
 
 export default function displayActors(data) {
   const actorElements = data

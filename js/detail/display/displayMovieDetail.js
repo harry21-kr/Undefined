@@ -1,8 +1,9 @@
 import {
   DEFAULT_MOVIE_IMAGE,
   TMDB_IMAGE_URL,
-} from "../config/constants/index.js";
-function movieData() {
+} from "../../config/constants/index.js";
+
+export default function displayMovieDetail() {
   const movieData = JSON.parse(sessionStorage.getItem("movie"));
   const moviePoster = document.querySelector("#poster-wrapper");
   const movieElementChildren = moviePoster.children;
@@ -22,6 +23,3 @@ function movieData() {
   movieOverview.style.fontSize = "16px";
   movieOverview.style.lineHeight = "23px";
 }
-movieData();
-// 영화제목 영화설명//
-export default movieData;

@@ -1,7 +1,7 @@
 import {
   DEFAULT_MOVIE_IMAGE,
   TMDB_IMAGE_URL,
-} from "../config/constants/index.js";
+} from "../../config/constants/index.js";
 
 export default function displaySimilarMovies(data) {
   if (data) {

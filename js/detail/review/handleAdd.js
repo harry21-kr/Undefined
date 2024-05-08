@@ -1,7 +1,8 @@
 import { incrementReviewCount, reviewCount } from "./reviewCount.js";
 import { reviewCnt, reviewContainer, errorMsgPar } from "./domElements.js";
-import { movieId } from "./index.js";
-import likeIcon from "./icon.js";
+import { movieId } from "../index.js";
+import likeIcon from "../icon.js";
+
 export const handleSubmit = (e) => {
   let review = {};
   let errorMessage = "";

@@ -1,12 +1,13 @@
 import { createReviewElement } from "./handleAdd.js";
 import { reviewContainer } from "./domElements.js";
-import { movieId } from "./index.js";
 import {
   incrementReviewCount,
   resetReviewCount,
   reviewCount,
 } from "./reviewCount.js";
-import likeIcon from "./icon.js";
+import likeIcon from "../icon.js";
+import { movieId } from "../index.js";
+
 export const displayAllReviews = () => {
   const keys = [];
   resetReviewCount();

@@ -1,8 +1,11 @@
 import useMovieDetailData from "./hook/useMovieDetailData.js";
-import displayActors from "./displayActors.js";
-import displayProviders from "./displayProviders.js";
-import displayTrailer from "./displayTrailer.js";
-import displaySimilarMovies from "./displaySimilarMovies.js";
+import addSearchEvent from "../search/addSearchEvent.js";
+import displayActors from "./display/displayActors.js";
+import displayProviders from "./display/displayProviders.js";
+import displayTrailer from "./display/displayTrailer.js";
+import displaySimilarMovies from "./display/displaySimilarMovies.js";
+import displayMovieDetail from "./display/displayMovieDetail.js";
+import initReviews from "./review/initReviews.js";
 
 const {
   getActorsData,
@@ -30,9 +33,15 @@ const providerElements = displayProviders(providers);
 const trailerElement = displayTrailer(trailer);
 const similarMovieElements = displaySimilarMovies(similarMovies);
 
+displayMovieDetail();
+
 actorsWrap.innerHTML = actorElements;
 if (providerElements) {
   providersWrap.innerHTML = providerElements;
 }
 trailerWrap.innerHTML = trailerElement;
 similarMoviesWrap.innerHTML = similarMovieElements;
+
+addSearchEvent();
+
+initReviews();

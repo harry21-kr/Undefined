@@ -2,13 +2,13 @@ import MoviesInfo from "./components/MoviesInfo.js";
 import useMovieData from "./hook/useMovieData.js";
 import addMovieAnimation from "./addMovieAnimation.js";
 
-const { getPopularMovies, getTopRatedMovies, getUpcomingMovies } =
+const { getPopularMovies, getTopRatedMovies, getTrendingMovies } =
   useMovieData();
 
 const [popularMovies, topRatedMovies, upcomingMovies] = await Promise.all([
   getPopularMovies(1),
   getTopRatedMovies(1),
-  getUpcomingMovies(1),
+  getTrendingMovies(1),
 ]);
 
 const topRatedMoviesWrap = document.getElementById("top-rated-movies-wrap");

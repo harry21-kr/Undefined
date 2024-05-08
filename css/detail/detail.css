@@ -1,3 +1,257 @@
+@import url("./password-modal.css");
+
 body {
-  background: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  max-width: 1224px;
+  width: 100%;
+}
+
+#trailer-wrapper {
+  display: flex;
+  height: 500px;
+  background-color: dimgray;
+}
+
+#trailer-video {
+  width: 100%;
+}
+
+#info-box-wrapper {
+  height: 400px;
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#poster-wrapper {
+  height: 100%;
+  max-width: 22%;
+}
+
+#poster-wrapper img {
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+}
+
+#movie-overall-info-wrapper {
+  width: 660px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#movie-basic-info-wrapper {
+  display: flex;
+  gap: 12px;
+  align-items: self-end;
+}
+
+#movie-title {
+  font-size: 40px;
+}
+
+#movie-feature {
+  font-size: var(--font-sm);
+}
+
+#movie-rate {
+  font-size: var(--font-lg);
+}
+
+#reviews-wrapper {
+  background: var(--primary-color);
+  padding: 40px 24px 40px 24px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+#review-cnt {
+  font-size: var(--font-lg);
+}
+
+#review-row {
+  position: relative;
+  min-height: 7rem;
+  background: #596279;
+  margin-top: 44px;
+  padding: 18px 16px 18px 16px;
+  border-radius: 10px;
+}
+
+#review-box-top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px white;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.detail-btn {
+  width: 4rem;
+  height: 1.7rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.detail-btn:hover {
+  cursor: pointer;
+}
+
+#review-btn-box {
+  display: flex;
+  justify-content: space-between;
+  width: 8.5rem;
+}
+
+#delete-review-btn {
+  color: var(--red-color);
+  border: 1px solid var(--red-color);
+}
+
+#review-box-bottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#review-content-box {
+  width: 100%;
+  height: 100%;
+}
+
+#review-display {
+  line-height: 1.3rem;
+}
+
+#review-detail-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 4rem;
+  width: 12%;
+  text-align: right;
+}
+
+#review-time {
+  font-size: 14px;
+}
+
+#like-count {
+  font-size: 18px;
+}
+
+#heart-icon {
+  color: var(--red-color);
+  margin-right: 0.2rem;
+}
+
+#review-empty-msg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  line-height: 2;
+}
+
+/* 리뷰 입력란 스타일 */
+#review-form-wrapper {
+  background: var(--primary-color);
+  border-radius: 10px;
+  margin-bottom: 50px; /*여기*/
+}
+
+textarea {
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+
+.review-input {
+  border-radius: 6px;
+  border: none;
+
+  background: var(--navy-color);
+  color: white;
+  transition: background 0.5s;
+  height: 30px;
+}
+
+.review-input:focus {
+  outline: none;
+  background: var(--secondary-color);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.review-input::-webkit-scrollbar {
+  display: none;
+}
+
+.review-text {
+  border-radius: 7px;
+  height: 60px;
+}
+
+#input-error-msg {
+  text-align: left;
+}
+
+#review-form {
+  padding: 20px;
+}
+
+#info-input-wrapper input {
+  margin-left: 8px;
+}
+
+#password-label {
+  margin-left: 20px;
+}
+
+#review-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+#review-label {
+  margin-bottom: 10px;
+}
+
+#review-form-btn-box {
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* 수정 입력란 스타일 */
+
+#edit-review-input {
+  width: 100%;
+  min-height: 4rem;
+  height: 100%;
+  overflow-y: auto;
+}
+
+#edit-review-confirm-btn-container {
+  display: flex;
+  justify-content: end;
+  margin-top: 0.5rem;
+}
+
+#edit-review-error-message {
+  position: absolute;
+  bottom: 2rem;
+  color: var(--red-color);
 }

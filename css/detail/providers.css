@@ -1,0 +1,28 @@
+#providers-info-wrapper {
+  height: 120px;
+  border-radius: 12px;
+  background: var(--primary-color);
+  padding: 12px 32px 12px 32px;
+}
+
+#providers-label {
+  font-size: var(--font-lg);
+  font-weight: bold;
+}
+
+#providers-list {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#provider-row {
+  display: flex;
+  gap: 32px;
+}
+
+.provider-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}

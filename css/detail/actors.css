@@ -1,0 +1,44 @@
+#actors-info-wrapper {
+  width: 220px;
+  height: 400px;
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+#actors-info-box {
+  padding: 20px;
+}
+
+#actors-label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#actors-list {
+  margin-top: 33px;
+}
+
+#actor-row {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.actor-wrapper {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.actor-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid black;
+}
+
+.actor-name {
+  font-size: var(--font-base);
+}

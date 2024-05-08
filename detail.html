@@ -4,14 +4,146 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/ea2261c03f.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- CSS 가져오기 -->
+    <script
+      src="https://kit.fontawesome.com/ea2261c03f.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/detail/detail.css" />
+    <link rel="stylesheet" href="css/detail/actors.css" />
+    <link rel="stylesheet" href="css/detail/providers.css" />
+    <link rel="stylesheet" href="css/detail/similar-movie.css" />
     <!-- JS 가져오기 -->
     <script type="module" src="js/detail/index.js"></script>
   </head>
   <body>
-    <h1>Hello World2!</h1>
+    <!-- 헤더 -->
+    <header>
+      <div>
+        <a href="index.html">
+          <img src="img/logo.png" />
+          <h1>movie.boobie</h1>
+        </a>
+        <div id="search-form-wrapper">
+          <div id="search-form">
+            <input
+              id="search-input"
+              type="text"
+              placeholder="찾고싶은 영화를 입력해보세요"
+            />
+            <button id="search-btn">검색</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- 영화 동영상 -->
+      <div id="trailer-wrapper"></div>
+      <div id="main-wrapper">
+        <div id="info-box-wrapper">
+          <!-- 영화 포스터 -->
+          <div id="poster-wrapper">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/5a7f41ad8fd4d236a4ad76d0/1669842753281-3T90U1EY5HUNCG43XERJ/A2_Poster_DC_v80_PAYOFF_221029_12trimHD.jpg"
+              alt=""
+            />
+          </div>
+          <!-- 영화 상세 정보 -->
+          <div id="movie-overall-info-wrapper">
+            <div id="movie-basic-info-wrapper">
+              <p id="movie-title"></p>
+              <p id="movie-feature"></p>
+            </div>
+            <p id="movie-overview"></p>
+            <p id="movie-rate"></p>
+            <div id="providers-info-wrapper">
+              <p id="providers-label">시청 가능한 플랫폼</p>
+              <ul id="providers-list">
+                <li id="provider-row"></li>
+              </ul>
+            </div>
+          </div>
+          <!-- 영화 캐스팅 -->
+          <div id="actors-info-wrapper">
+            <div id="actors-info-box">
+              <p id="actors-label">출연자</p>
+              <ul id="actors-list">
+                <li id="actor-row"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 비슷한 영화 -->
+        <div id="similar-movies-wrapper">
+          <p id="similar-movies-label">이런 영화는 어떠세요?</p>
+          <ul id="similar-movies-list">
+            <li id="similar-movie-row"></li>
+          </ul>
+        </div>
+        <!-- 해당 영화 리뷰 -->
+        <div id="reviews-wrapper">
+          <div id="review-cnt"></div>
+          <div>
+            <ul id="review-list"></ul>
+          </div>
+        </div>
+        <!-- 리뷰 입력란 -->
+        <div id="review-form-wrapper">
+          <form id="review-form">
+            <div id="info-input-wrapper">
+              <label id="username-label" for="username">사용자명</label>
+              <input type="text" id="username" class="review-input" />
+              <label id="password-label" for="password">비밀번호</label>
+              <input type="password" id="password" class="review-input" />
+            </div>
+            <div id="review-wrapper">
+              <textarea
+                id="review"
+                class="review-input review-text"
+                placeholder="내용을 입력하세요."
+              ></textarea>
+            </div>
+            <div id="review-form-btn-box">
+              <p id="input-error-msg"></p>
+              <button id="review-btn" class="detail-btn">등록</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <!-- 푸터 -->
+    <footer>
+      <div>
+        <div>
+          <h4>movie.boobie</h4>
+          <p>당신의 최애 영화를 찾아보세요.</p>
+        </div>
+        <a href="https://github.com/harry21-kr/undefined" target="_blank"
+          ><img src="img/github.webp"
+        /></a>
+      </div>
+    </footer>
+    <dialog id="password-modal">
+      <form id="password-modal-form">
+        <p id="password-modal-message">비밀번호를 입력하세요.</p>
+        <input type="password" id="password-modal-input" />
+        <div id="password-modal-btns">
+          <button type="button" id="password-modal-cancel-btn">취소</button>
+          <button type="submit" id="password-modal-confirm-btn">확인</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="password-error-modal">
+      <div id="password-error-container">
+        <p id="password-error-message">비밀번호가 일치하지 않습니다.</p>
+        <button id="password-error-confirm-btn" type="button">확인</button>
+      </div>
+    </dialog>
   </body>
 </html>

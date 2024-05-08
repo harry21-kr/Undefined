@@ -16,15 +16,19 @@
   justify-content: space-evenly;
 }
 
-#similar-movie-img {
+.similar-movie-img {
   width: 220px;
   height: 300px;
   border-radius: 12px;
 }
 
-#similar-movie-title {
+.similar-movie-title {
   margin-top: 12px;
   text-align: center;
   font-size: var(--font-lg);
   font-weight: bold;
+  width: 220px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

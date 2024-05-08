@@ -2,18 +2,18 @@ import MoviesInfo from "./components/MoviesInfo.js";
 import useMovieData from "./hook/useMovieData.js";
 import addMovieAnimation from "./addMovieAnimation.js";
 
-const { getPopularMovies, getTopRatedMovies, getUpcomingMovies } =
+const { getPopularMovies, getTopRatedMovies, getTrendingMovies } =
   useMovieData();
 
-const [popularMovies, topRatedMovies, upcomingMovies] = await Promise.all([
+const [popularMovies, topRatedMovies, trendingMovies] = await Promise.all([
   getPopularMovies(1),
   getTopRatedMovies(1),
-  getUpcomingMovies(1),
+  getTrendingMovies(1),
 ]);
 
 const topRatedMoviesWrap = document.getElementById("top-rated-movies-wrap");
 const popularMoviesWrap = document.getElementById("popular-movies-wrap");
-const upcomingMoviesWrap = document.getElementById("upcoming-movies-wrap");
+const trendingMoviesWrap = document.getElementById("trending-movies-wrap");
 
 const topRatedMoviesPrevBtn = document.getElementById(
   "top-rated-movies-previous-button"
@@ -27,20 +27,20 @@ const popularMoviesPrevBtn = document.getElementById(
 const popularMoviesNextBtn = document.getElementById(
   "popular-movies-next-button"
 );
-const upcomingMoviesPrevBtn = document.getElementById(
-  "upcoming-movies-previous-button"
+const trendingMoviesPrevBtn = document.getElementById(
+  "trending-movies-previous-button"
 );
-const upcomingMoviesNextBtn = document.getElementById(
-  "upcoming-movies-next-button"
+const trendingMoviesNextBtn = document.getElementById(
+  "trending-movies-next-button"
 );
 
 const topRatedMovieElements = MoviesInfo(topRatedMovies);
 const popularMovieElements = MoviesInfo(popularMovies);
-const upcomingMovieElements = MoviesInfo(upcomingMovies);
+const trendingMovieElements = MoviesInfo(trendingMovies);
 
 topRatedMoviesWrap.innerHTML = topRatedMovieElements;
 popularMoviesWrap.innerHTML = popularMovieElements;
-upcomingMoviesWrap.innerHTML = upcomingMovieElements;
+trendingMoviesWrap.innerHTML = trendingMovieElements;
 
 addMovieAnimation(
   topRatedMoviesWrap,
@@ -53,7 +53,7 @@ addMovieAnimation(
   popularMoviesPrevBtn
 );
 addMovieAnimation(
-  upcomingMoviesWrap,
-  upcomingMoviesNextBtn,
-  upcomingMoviesPrevBtn
+  trendingMoviesWrap,
+  trendingMoviesNextBtn,
+  trendingMoviesPrevBtn
 );

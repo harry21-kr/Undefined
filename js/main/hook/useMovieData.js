@@ -16,9 +16,9 @@ const useMovieData = () => {
     return res.results;
   };
 
-  const getUpcomingMovies = async (page = 1) => {
+  const getTrendingMovies = async (page = 1) => {
     const res = await get(
-      `${TMDB_API_URL}/movie/upcoming?language=ko-KR&page=${page}&api_key=${API_KEY}`
+      `${TMDB_API_URL}/trending/movie/day?language=ko-KR&page=${page}&api_key=${API_KEY}`
     );
     return res.results;
   };
@@ -26,7 +26,7 @@ const useMovieData = () => {
   return {
     getPopularMovies,
     getTopRatedMovies,
-    getUpcomingMovies,
+    getTrendingMovies,
   };
 };
 

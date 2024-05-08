@@ -23,6 +23,7 @@ export const displayAllReviews = () => {
         incrementReviewCount();
         const reviewRow = createReviewElement(reviewContent, reviewCount, key);
         reviewContainer.appendChild(reviewRow);
+        likeIcon(key);
       }
     }
   });

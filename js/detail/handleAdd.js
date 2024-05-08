@@ -5,6 +5,7 @@ import likeIcon from "./icon.js";
 export const handleSubmit = (e) => {
   let review = {};
   let errorMessage = "";
+  let likeCount = 0;
   const reviewInputs = document.querySelectorAll(".review-input");
   e.preventDefault();
 
@@ -48,13 +49,9 @@ export const handleSubmit = (e) => {
   ];
 
   const submittedAt = `${year}-${month}-${day} ${hour}:${minute}`;
-  review = { ...review, submittedAt, movieId };
+  review = { ...review, submittedAt, movieId, likeCount };
 
   const key = date.getTime();
-  review = {
-    ...review,
-    numCount: ``,
-  };
 
   localStorage.setItem(key, JSON.stringify(review));
   addReview(review, key);
@@ -71,7 +68,7 @@ function addReview(review, key) {
 }
 
 export function createReviewElement(reviewContent, reviewCount, key) {
-  const { username, review, submittedAt } = reviewContent;
+  const { username, review, submittedAt, likeCount } = reviewContent;
   const reviewEmptyMessage = document.querySelector("#review-empty-msg");
   reviewEmptyMessage && reviewEmptyMessage.remove();
   reviewCnt.innerHTML = `리뷰 ${reviewCount}`;
@@ -95,11 +92,11 @@ export function createReviewElement(reviewContent, reviewCount, key) {
                     </div>
                     <div id="review-detail-box">
                       <p id="review-time">${submittedAt}</p>
-                      <div id="${key}">
-                      <i class="fa-solid fa-heart" id="fa-solid${key}"></i>
-                      <i class="fa-regular fa-heart"id="fa-regular${key}"></i>
+                      <div id="like-wrapper-${key}">
+                        <i class="fa-solid fa-heart" id="fa-solid-${key}"></i>
+                        <i class="fa-regular fa-heart"id="fa-regular-${key}"></i>
+                        <p id="like-count-${key}"></p>
                       </div>
-                      <p id="count${key}"></p>
                       </div>
                   </div>
                   <p id="edit-review-error-message"></p>

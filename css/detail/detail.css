@@ -75,7 +75,7 @@ main {
 }
 
 #review-cnt {
-  font-size: 1.5rem;
+  font-size: var(--font-lg);
 }
 
 #review-row {

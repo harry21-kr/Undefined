@@ -3,36 +3,43 @@ export default function likeIcon(key) {
     return false;
   };
 
-  const icon = document.querySelector(`#fa-regular${key}`);
-  const iconSolid = document.querySelector(`#fa-solid${key}`);
-  const select = document.getElementById(`${key}`);
-  const count = document.getElementById(`count${key}`);
+  const likeWrapper = document.querySelector(`#like-wrapper-${key}`);
+  const emptyHeart = document.querySelector(`#fa-regular-${key}`);
+  const filledHeart = document.querySelector(`#fa-solid-${key}`);
+  const likeCount = document.querySelector(`#like-count-${key}`);
 
   // default 값
-  select.style.display = "inline-block";
-  select.style.cursor = "pointer";
-  iconSolid.style.display = "none";
-  icon.style.display = "inline-block";
-  count.style.display = "inline-block";
+  likeWrapper.style.display = "inline-block";
+  likeWrapper.style.cursor = "pointer";
+  emptyHeart.style.display = "inline-block";
+  filledHeart.style.display = "none";
+  likeCount.style.display = "inline-block";
 
-  // 카운트
+  const review = JSON.parse(localStorage.getItem(key));
+
+  // 좋아요 수 가져오기
   let num = 0;
-  count.textContent = `좋아요 : ${num}`;
+  if (review) {
+    num = review["likeCount"];
+  }
+  likeCount.innerHTML = `${num}`;
 
   // click 이벤트
-  select.addEventListener("click", clickEvent);
+  likeWrapper.addEventListener("click", clickEvent);
 
   // click 함수선언
   function clickEvent() {
-    iconSolid.style.display = "inline-block";
-    icon.style.display = "none";
+    emptyHeart.style.display = "none";
+    filledHeart.style.display = "inline-block";
+
     setTimeout(() => {
-      iconSolid.style.display = "none";
-      icon.style.display = "inline-block";
+      likeCount.innerHTML = `${num}`;
+      emptyHeart.style.display = "inline-block";
+      filledHeart.style.display = "none";
     }, 200);
-    num += 1;
-    count.textContent = `좋아요 : ${num}`;
+
+    // 로컬스토리지에서 해당 리뷰의 좋아요 수 올리기
+    review["likeCount"] = num += 1;
+    localStorage.setItem(key, JSON.stringify(review));
   }
 }
-
-// likeIcon();

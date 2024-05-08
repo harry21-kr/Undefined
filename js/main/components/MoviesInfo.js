@@ -8,8 +8,7 @@ export default function MoviesInfo(data) {
     .map((movie, idx) => {
       delete movie.original_title;
       const encodedMovie = encodeURIComponent(JSON.stringify(movie));
-      // TODO: main에 merge 될때 링크 수정 필요 (/detail.html -> /detail)
-      const encodedDetailPageLink = encodeURIComponent("/detail.html");
+      const encodedDetailPageLink = encodeURIComponent("/detail");
 
       return `
         <div
